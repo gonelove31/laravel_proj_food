@@ -1,3 +1,28 @@
+# Order Food
+
+Ứng dụng đặt đồ ăn được phát triển bằng Laravel và ReactJS.
+
+## Tính năng chính
+
+- Đặt món ăn trực tuyến
+- Quản lý đơn hàng
+- Theo dõi trạng thái đơn hàng
+- Thanh toán trực tuyến
+- Quản lý người dùng
+
+## Cài đặt
+
+Clone repository này và cài đặt các dependencies:
+
+```bash
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
+```
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
