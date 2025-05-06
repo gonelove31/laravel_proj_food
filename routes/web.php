@@ -140,4 +140,10 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('razorpay/payment', [PaymentController::class, 'payWithRazorpay'])->name('razorpay.payment');
 });
 
+/* User Dashboard Routes */
+Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'dashboard'], function(){
+    // Order Routes
+    Route::post('cancel-order/{id}', [App\Http\Controllers\Frontend\DashboardController::class, 'cancelOrder'])->name('cancel-order');
+});
+
 

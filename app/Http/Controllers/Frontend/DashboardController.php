@@ -73,4 +73,30 @@ class DashboardController extends Controller
         }
         return response(['status' => 'error', 'message' => 'something went wrong!']);
     }
+
+    /**
+     * Cancel user order
+     */
+    public function cancelOrder(Request $request, string $id)
+    {
+        try {
+            $order = Order::where('user_id', auth()->user()->id)->findOrFail($id);
+            
+            if($order->order_status !== 'pending') {
+                return response(['status' => 'error', 'message' => 'You can only cancel pending orders!']);
+            }
+            
+            $request->validate([
+                'cancel_reason' => ['required'],
+            ]);
+
+            $order->order_status = 'declined';
+            $order->cancel_reason = $request->cancel_reason;
+            $order->save();
+            
+            return response(['status' => 'success', 'message' => 'Order has been cancelled successfully!']);
+        } catch(\Exception $e) {
+            return response(['status' => 'error', 'message' => 'Something went wrong!']);
+        }
+    }
 }
