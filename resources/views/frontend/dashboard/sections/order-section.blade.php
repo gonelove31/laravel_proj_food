@@ -34,7 +34,12 @@
                             <td>
                                 <h5>{{ currencyPosition($order->grand_total) }}</h5>
                             </td>
-                            <td><a class="view_invoice" onclick="viewInvoice('{{ $order->id }}')">View Details</a></td>
+                            <td>
+                                <a class="view_invoice" onclick="viewInvoice('{{ $order->id }}')">View Details</a>
+                                @if ($order->order_status === 'pending')
+                                <a href="javascript:;" class="cancel_order" onclick="openCancelModal('{{ $order->id }}')">Cancel Order</a>
+                                @endif
+                            </td>
                         </tr>
                         @endforeach
 
@@ -47,9 +52,7 @@
             <a class="go_back d-print-none"><i class="fas fa-long-arrow-alt-left"></i> go back</a>
             <div class="fp__track_order d-print-none">
                 <ul>
-
                     @if ($order->order_status === 'declined')
-
                     <li class="
                     declined_status
                     {{ in_array($order->order_status, ['declined']) ? 'active' : '' }}
@@ -202,6 +205,64 @@
             $(".invoice_details_"+id).fadeIn();
         }
 
+        function openCancelModal(id) {
+            $('#orderIdInput').val(id);
+            $('#cancelOrderModal').modal('show');
+        }
+
+        function cancelOrder() {
+            var id = $('#orderIdInput').val();
+            var cancelReason = '';
+            
+            if ($('#otherReason').is(':checked')) {
+                cancelReason = $('#customReason').val();
+                if (!cancelReason) {
+                    toastr.error('Please provide a reason for cancellation');
+                    return;
+                }
+            } else {
+                var selectedReason = $('input[name="cancel_reason"]:checked');
+                if (selectedReason.length === 0) {
+                    toastr.error('Please select a reason for cancellation');
+                    return;
+                }
+                cancelReason = selectedReason.val();
+            }
+            
+            $.ajax({
+                url: "{{ route('cancel-order', '') }}/" + id,
+                type: 'POST',
+                data: {
+                    _token: "{{ csrf_token() }}",
+                    cancel_reason: cancelReason
+                },
+                success: function(response) {
+                    if(response.status === 'success') {
+                        $('#cancelOrderModal').modal('hide');
+                        toastr.success(response.message);
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 1000);
+                    } else {
+                        toastr.error(response.message);
+                    }
+                },
+                error: function(xhr) {
+                    toastr.error('Something went wrong!');
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            $('#otherReason').change(function() {
+                if($(this).is(':checked')) {
+                    $('#customReasonContainer').show();
+                } else {
+                    $('#customReasonContainer').hide();
+                }
+            });
+        });
+
         function printInvoice(id) {
             let printContents = $('.invoice_details_'+id).html();
 
@@ -221,3 +282,52 @@
         }
     </script>
 @endpush
+
+<!-- Cancel Order Modal -->
+<div class="modal fade" id="cancelOrderModal" tabindex="-1" role="dialog" aria-labelledby="cancelOrderModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cancelOrderModalLabel">Cancel Order</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="orderIdInput">
+                <p>Please select a reason for cancellation:</p>
+                
+                <div class="cancellation-reasons">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="cancel_reason" id="reason1" value="Changed my mind">
+                        <label class="form-check-label" for="reason1">Changed my mind</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="cancel_reason" id="reason2" value="Ordered by mistake">
+                        <label class="form-check-label" for="reason2">Ordered by mistake</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="cancel_reason" id="reason3" value="Found better price elsewhere">
+                        <label class="form-check-label" for="reason3">Found better price elsewhere</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="cancel_reason" id="reason4" value="Delivery time is too long">
+                        <label class="form-check-label" for="reason4">Delivery time is too long</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" type="radio" name="cancel_reason" id="otherReason" value="other">
+                        <label class="form-check-label" for="otherReason">Other reason</label>
+                    </div>
+                    
+                    <div id="customReasonContainer" style="display: none;">
+                        <textarea id="customReason" class="form-control mt-2" placeholder="Please specify your reason"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" onclick="cancelOrder()">Cancel Order</button>
+            </div>
+        </div>
+    </div>
+</div>

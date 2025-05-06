@@ -1,0 +1,4 @@
+.git
+.git\*
+database.sql
+database-safe.sql 

@@ -71,6 +71,16 @@
                                 </address>
                             </div>
                         </div>
+                        <tr>
+                            <td><b>Order Status: </b></td>
+                            <td>{{ $order->order_status }}</td>
+                        </tr>
+                        @if($order->order_status === 'declined' && $order->cancel_reason)
+                        <tr>
+                            <td><b>Cancellation Reason: </b></td>
+                            <td>{{ $order->cancel_reason }}</td>
+                        </tr>
+                        @endif
                     </div>
                 </div>
 

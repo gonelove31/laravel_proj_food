@@ -29,12 +29,14 @@ class OrderDataTable extends DataTable
                 return $query->grand_total.' '.strtoupper($query->currency_name);
             })
             ->addColumn('order_status', function($query){
-                if($query->order_status === 'delivered'){
-                    return '<span class="badge badge-success">Delivered</span>';
-                }elseif($query->order_status === 'declined'){
-                    return '<span class="badge badge-danger">Declined</span>';
-                }else {
-                    return '<span class="badge badge-warning">'.$query->order_status.'</span>';
+                if($query->order_status === 'pending'){
+                    return '<span class="badge bg-secondary">Pending</span>';
+                }else if($query->order_status === 'in_process'){
+                    return '<span class="badge bg-primary">In Process</span>';
+                }else if($query->order_status === 'delivered'){
+                    return '<span class="badge bg-success">Delivered</span>';
+                }else if($query->order_status === 'declined'){
+                    return '<span class="badge bg-danger">Declined</span>';
                 }
             })
             ->addColumn('payment_status', function($query){

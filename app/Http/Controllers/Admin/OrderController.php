@@ -69,7 +69,6 @@ class OrderController extends Controller
 
             return redirect()->back();
         }
-
     }
 
     function destroy(string $id) : Response {

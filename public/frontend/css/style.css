@@ -6913,3 +6913,70 @@ CHECKOUT PAGE START
     color: var(--colorWhite) !important;
     border-color: var(--colorWhite) !important;
 }
+
+.fp_dashboard_order table tbody tr td .cancel_order {
+    background: #ff6b6b;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    margin-left: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.fp_dashboard_order table tbody tr td .cancel_order:hover {
+    background: #f53a3a;
+}
+
+/* Cancel Order Modal */
+#cancelOrderModal .modal-content {
+    border-radius: 8px;
+}
+
+#cancelOrderModal .modal-header {
+    border-bottom: 1px solid #ef5b5b;
+    background-color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+#cancelOrderModal .modal-title {
+    color: #ef5b5b;
+    font-weight: 600;
+}
+
+#cancelOrderModal .modal-body {
+    padding: 20px;
+}
+
+#cancelOrderModal .cancellation-reasons {
+    margin-top: 15px;
+}
+
+#cancelOrderModal .form-check-label {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#cancelOrderModal .form-check-input {
+    margin-top: 5px;
+}
+
+#cancelOrderModal .modal-footer {
+    border-top: 1px solid #ddd;
+}
+
+#cancelOrderModal .btn-danger {
+    background-color: #ef5b5b;
+    border: none;
+}
+
+#cancelOrderModal .btn-danger:hover {
+    background-color: #e53e3e;
+}
+
+#customReason {
+    resize: vertical;
+    min-height: 100px;
+}

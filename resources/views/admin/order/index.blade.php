@@ -47,7 +47,6 @@
                                 <option value="in_process">In Process</option>
                                 <option value="delivered">Delivered</option>
                                 <option value="declined">Declined</option>
-
                             </select>
                         </div>
                         <div class="modal-footer">

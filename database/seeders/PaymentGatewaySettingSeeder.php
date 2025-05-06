@@ -58,21 +58,29 @@ class PaymentGatewaySettingSeeder extends Seeder
             array(
                 "id" => 7,
                 "key" => "paypal_api_key",
+<<<<<<< HEAD
                 "value" => "YOUR_PAYPAL_API_KEY_HERE",
+=======
+                "value" => "PAYPAL_API_KEY_PLACEHOLDER",
+>>>>>>> master
                 "created_at" => "2023-08-19 05:36:53",
                 "updated_at" => "2023-08-19 07:56:43",
             ),
             array(
                 "id" => 8,
                 "key" => "paypal_secret_key",
+<<<<<<< HEAD
                 "value" => "YOUR_PAYPAL_SECRET_KEY_HERE",
+=======
+                "value" => "PAYPAL_SECRET_KEY_PLACEHOLDER",
+>>>>>>> master
                 "created_at" => "2023-08-19 05:36:53",
                 "updated_at" => "2023-08-19 07:56:43",
             ),
             array(
                 "id" => 9,
                 "key" => "paypal_app_id",
-                "value" => "APP_ID",
+                "value" => "APP_ID_PLACEHOLDER",
                 "created_at" => "2023-08-21 05:07:55",
                 "updated_at" => "2023-08-21 05:07:55",
             ),
@@ -114,14 +122,22 @@ class PaymentGatewaySettingSeeder extends Seeder
             array(
                 "id" => 15,
                 "key" => "stripe_api_key",
+<<<<<<< HEAD
                 "value" => "YOUR_STRIPE_API_KEY_HERE",
+=======
+                "value" => "STRIPE_API_KEY_PLACEHOLDER",
+>>>>>>> master
                 "created_at" => "2023-08-21 07:13:57",
                 "updated_at" => "2023-08-21 07:47:18",
             ),
             array(
                 "id" => 16,
                 "key" => "stripe_secret_key",
+<<<<<<< HEAD
                 "value" => "YOUR_STRIPE_SECRET_KEY_HERE",
+=======
+                "value" => "STRIPE_SECRET_KEY_PLACEHOLDER",
+>>>>>>> master
                 "created_at" => "2023-08-21 07:13:57",
                 "updated_at" => "2023-08-21 07:47:18",
             ),
@@ -156,14 +172,22 @@ class PaymentGatewaySettingSeeder extends Seeder
             array(
                 "id" => 21,
                 "key" => "razorpay_api_key",
+<<<<<<< HEAD
                 "value" => "YOUR_RAZORPAY_API_KEY_HERE",
+=======
+                "value" => "RAZORPAY_API_KEY_PLACEHOLDER",
+>>>>>>> master
                 "created_at" => "2023-08-22 05:45:13",
                 "updated_at" => "2023-08-22 06:42:04",
             ),
             array(
                 "id" => 22,
                 "key" => "razorpay_secret_key",
+<<<<<<< HEAD
                 "value" => "YOUR_RAZORPAY_SECRET_KEY_HERE",
+=======
+                "value" => "RAZORPAY_SECRET_KEY_PLACEHOLDER",
+>>>>>>> master
                 "created_at" => "2023-08-22 05:45:13",
                 "updated_at" => "2023-08-22 06:42:04",
             ),
