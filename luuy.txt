@@ -1,0 +1,6 @@
+-- chạy bằng sql bằng laragon hay xampp đều được , cái nào chạy trước thì chiếm cổng trc 
+-- chạy apache thì để chạy trên local/phpadmin 
+-- chạy bằng php artisan server thì ko cần apache cx đc nhưng mà db my sql vẫn p chạy 1 trong 2 laragon / xam pp 
+-- hiện tại chạy trên xampp 
+-- anh lay the nao 
+-- 
