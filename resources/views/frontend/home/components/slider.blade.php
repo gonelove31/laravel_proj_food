@@ -11,7 +11,7 @@
                                     <div class="img">
                                         <img src="{{ asset($slider->image) }}" alt="food item" class="img-fluid w-100">
                                         @if ($slider->offer)
-                                        <span> {{ $slider->offer }} </span>
+                                        <span>Ưu đãi đặc biệt</span>
                                         @endif
                                     </div>
                                 </div>
@@ -23,7 +23,7 @@
                                     <p>{!! $slider->short_description !!}</p>
                                     <ul class="d-flex flex-wrap">
                                         @if ($slider->button_link)
-                                        <li><a class="common_btn" href="{{ $slider->button_link }}">shop now</a></li>
+                                        <li><a class="common_btn" href="{{ route('product.index') }}">Xem thực đơn</a></li>
                                         @endif
                                     </ul>
                                 </div>

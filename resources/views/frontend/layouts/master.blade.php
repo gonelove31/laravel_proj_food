@@ -129,7 +129,7 @@
         SCROLL BUTTON START
     ==============================-->
         <div class="fp__scroll_btn">
-            go to top
+            Lên đầu trang
         </div>
         <!--=============================
         SCROLL BUTTON END

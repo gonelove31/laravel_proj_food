@@ -3,7 +3,7 @@
         <div class="row wow fadeInUp" data-wow-duration="1s">
             <div class="col-md-8 col-lg-7 col-xl-6 m-auto text-center">
                 <div class="fp__section_heading mb_50">
-                    <h4>{!! @$sectionTitles['daily_offer_top_title'] !!}</h4>
+                    <h4>Ưu đãi đặc biệt</h4>
                     <h2>{!! @$sectionTitles['daily_offer_main_title'] !!}</h2>
                     <span>
                         <img src="{{ asset('frontend/images/heading_shapes.png') }}" alt="shapes" class="img-fluid w-100">

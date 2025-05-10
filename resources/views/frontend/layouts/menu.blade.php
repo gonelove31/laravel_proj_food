@@ -39,8 +39,8 @@
                     <div class="fp__search_form">
                         <form action="{{ route('product.index') }}" method="GET">
                             <span class="close_search"><i class="far fa-times"></i></span>
-                            <input type="text" placeholder="Search . . ." name="search">
-                            <button type="submit">search</button>
+                            <input type="text" placeholder="Tìm kiếm..." name="search">
+                            <button type="submit">Tìm kiếm</button>
                         </form>
                     </div>
                 </li>
@@ -75,7 +75,7 @@
 <div class="fp__menu_cart_area">
     <div class="fp__menu_cart_boody">
         <div class="fp__menu_cart_header">
-            <h5>total item (<span class="cart_count" style="font-size: 16px">{{ count(Cart::content()) }}</span>)</h5>
+            <h5>Tổng số món (<span class="cart_count" style="font-size: 16px">{{ count(Cart::content()) }}</span>)</h5>
             <span class="close_cart"><i class="fal fa-times"></i></span>
         </div>
         <ul class="cart_contents">
@@ -101,8 +101,8 @@
             @endforeach
 
         </ul>
-        <p class="subtotal">sub total <span class="cart_subtotal">{{ currencyPosition(cartTotal()) }}</span></p>
-        <a class="cart_view" href="{{ route('cart.index') }}"> view cart</a>
+        <p class="subtotal">Tạm tính <span class="cart_subtotal">{{ currencyPosition(cartTotal()) }}</span></p>
+        <a class="cart_view" href="{{ route('cart.index') }}">Xem giỏ hàng</a>
         {{-- <a class="checkout" href="check_out.html">checkout</a> --}}
     </div>
 </div>
@@ -115,23 +115,23 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Book a Table</h1>
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Đặt bàn</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form class="fp__reservation_form" action="{{ route('reservation.store') }}" method="POST">
                         @csrf
-                        <input class="reservation_input" type="text" placeholder="Name" name="name">
-                        <input class="reservation_input" type="text" placeholder="Phone" name="phone">
+                        <input class="reservation_input" type="text" placeholder="Họ tên" name="name">
+                        <input class="reservation_input" type="text" placeholder="Số điện thoại" name="phone">
                         <input class="reservation_input" type="date" name="date">
                         <select class="reservation_input nice-select" name="time">
-                            <option value="">select time</option>
+                            <option value="">Chọn giờ</option>
                             @foreach ($reservationTimes as $time)
-                            <option value="{{ $time->start_time }}-{{ $time->end_time }}">{{ $time->start_time }} to {{ $time->end_time }}</option>
+                            <option value="{{ $time->start_time }}-{{ $time->end_time }}">{{ $time->start_time }} đến {{ $time->end_time }}</option>
                             @endforeach
                         </select>
-                        <input class="reservation_input" type="text" placeholder="Persons" name="persons">
-                        <button type="submit" class="btn_submit">book table</button>
+                        <input class="reservation_input" type="text" placeholder="Số người" name="persons">
+                        <button type="submit" class="btn_submit">Đặt bàn</button>
                     </form>
                 </div>
             </div>

@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-lg-2 col-sm-4 col-md-6">
                     <div class="fp__footer_content">
-                        <h3>Short Link</h3>
+                        <h3>Liên kết nhanh</h3>
                         <ul>
                             @foreach ($footerMenuOne as $menuItem)
                             <li><a href="{{ $menuItem['link'] }}">{{ $menuItem['label'] }}</a></li>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-lg-2 col-sm-4 col-md-6 order-sm-4 order-lg-3">
                     <div class="fp__footer_content">
-                        <h3>Help Link</h3>
+                        <h3>Liên kết hỗ trợ</h3>
                         <ul>
                             @foreach ($footerMenuTwo as $menuItem)
                             <li><a href="{{ $menuItem['link'] }}">{{ $menuItem['label'] }}</a></li>
@@ -52,14 +52,14 @@
                 </div>
                 <div class="col-lg-3 col-sm-8 col-md-6 order-lg-4">
                     <div class="fp__footer_content">
-                        <h3>subscribe</h3>
+                        <h3>Đăng ký nhận tin</h3>
                         <form class="subscribe_form">
                             @csrf
-                            <input type="text" placeholder="Subscribe" name="email">
-                            <button type="submit" class="subscribe_btn">Subscribe</button>
+                            <input type="text" placeholder="Email của bạn" name="email">
+                            <button type="submit" class="subscribe_btn">Đăng ký</button>
                         </form>
                         <div class="fp__footer_social_link">
-                            <h5>follow us:</h5>
+                            <h5>Theo dõi chúng tôi:</h5>
                             @php
                                 $socials = \App\Models\SocialLink::where('status', 1)->get();
                             @endphp

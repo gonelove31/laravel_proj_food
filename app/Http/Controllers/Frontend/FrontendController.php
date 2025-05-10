@@ -45,12 +45,14 @@ class FrontendController extends Controller
         $sliders = Slider::where('status', 1)->get();
         $whyChooseUs = WhyChooseUs::where('status', 1)->get();
         $categories = Category::where(['show_at_home' => 1, 'status' => 1])->get();
+        $products = Product::with(['category'])->where('status', 1)->get();
         $dailyOffers = DailyOffer::with('product')->where('status', 1)->take(15)->get();
         $bannerSliders = BannerSlider::where('status', 1)->latest()->take(10)->get();
         $chefs = Chef::where(['show_at_home' => 1, 'status' => 1])->get();
         $appSection = AppDownloadSection::first();
         $testimonials = Testimonial::where(['show_at_home' => 1, 'status' => 1])->get();
         $counter = Counter::first();
+        $teams = Chef::where(['show_at_home' => 1, 'status' => 1])->get();
         $latestBlogs = Blog::withCount(['comments' => function($query){
             $query->where('status', 1);
         }])->with(['category', 'user'])->where('status', 1)->latest()->take(3)->get();
@@ -61,12 +63,14 @@ class FrontendController extends Controller
                 'sectionTitles',
                 'whyChooseUs',
                 'categories',
+                'products',
                 'dailyOffers',
                 'bannerSliders',
                 'chefs',
                 'appSection',
                 'testimonials',
                 'counter',
+                'teams',
                 'latestBlogs'
             ));
     }

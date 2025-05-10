@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remember The Fallen - Tour Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <style>
+        #map {
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .map-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .custom-marker {
+            background-color: #EFBE56;
+            border-radius: 50%;
+            border: 2px solid white;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            color: white;
+        }
+        .start-marker {
+            background-color: #4CAF50;
+        }
+        .end-marker {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="map-container">
+        <h2>Remember The Fallen - Journey Map</h2>
+        <div id="map"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tạo bản đồ
+            const map = L.map('map').setView([36.0, -95.0], 4);
+            
+            // Thêm lớp bản đồ từ OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Tùy chỉnh icon
+            function createMarkerIcon(isStart, isEnd, index) {
+                let className = 'custom-marker';
+                if (isStart) className += ' start-marker';
+                if (isEnd) className += ' end-marker';
+                
+                return L.divIcon({
+                    className: className,
+                    iconSize: [30, 30],
+                    html: index
+                });
+            }
+
+            // Danh sách các điểm dừng
+            const locations = [
+                { name: "Angleton, TX", position: [29.1688, -95.4333], isStart: true },
+                { name: "Colorado Springs, CO", position: [38.8339, -104.8214] },
+                { name: "Naperville, IL", position: [41.7508, -88.1535] },
+                { name: "Murray, KY", position: [36.6104, -88.3147] },
+                { name: "Franklin, TN", position: [35.9260, -86.8689] },
+                { name: "Fairfax, VA", position: [38.8462, -77.3064] },
+                { name: "Plant City, FL", position: [28.0186, -82.1128] },
+                { name: "Angleton, TX", position: [29.1688, -95.4333], isEnd: true }
+            ];
+
+            // Tạo marker cho mỗi điểm
+            locations.forEach((location, index) => {
+                const isLastLocation = index === locations.length - 1;
+                const icon = createMarkerIcon(
+                    index === 0, 
+                    isLastLocation, 
+                    index === 0 ? 'S' : (isLastLocation ? 'E' : index)
+                );
+                
+                L.marker(location.position, {icon: icon})
+                 .addTo(map)
+                 .bindPopup('<b>' + location.name + '</b>');
+            });
+
+            // Tạo đường đi
+            const routePoints = locations.map(location => location.position);
+            const route = L.polyline(routePoints, {
+                color: '#EFBE56',
+                weight: 4,
+                opacity: 0.8,
+                lineJoin: 'round'
+            }).addTo(map);
+            
+            // Đảm bảo đường đi hiển thị đầy đủ trên bản đồ
+            map.fitBounds(route.getBounds(), {
+                padding: [30, 30]
+            });
+            
+            // Thêm hiệu ứng mũi tên dọc theo đường đi
+            const arrowPatterns = L.polylineDecorator(route, {
+                patterns: [
+                    {
+                        offset: '10%', 
+                        repeat: '25%', 
+                        symbol: L.Symbol.arrowHead({
+                            pixelSize: 15,
+                            polygon: false,
+                            pathOptions: {
+                                color: '#EFBE56',
+                                weight: 2,
+                                stroke: true
+                            }
+                        })
+                    }
+                ]
+            }).addTo(map);
+        });
+    </script>
+</body>
+</html>

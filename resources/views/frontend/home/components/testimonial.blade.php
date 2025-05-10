@@ -3,12 +3,12 @@
         <div class="row wow fadeInUp" data-wow-duration="1s">
             <div class="col-md-8 col-lg-7 col-xl-6 m-auto text-center">
                 <div class="fp__section_heading mb_40">
-                    <h4>{{ @$sectionTitles['testimonial_top_title'] }}</h4>
-                    <h2>{{ @$sectionTitles['testimonial_main_title'] }}</h2>
+                    <h4>Đánh giá</h4>
+                    <h2>Khách hàng nói gì về chúng tôi</h2>
                     <span>
                         <img src="images/heading_shapes.png" alt="shapes" class="img-fluid w-100">
                     </span>
-                    <p>{{ @$sectionTitles['testimonial_sub_title'] }}</p>
+                    <p>Lắng nghe những chia sẻ chân thực từ khách hàng về trải nghiệm của họ với FoodPark</p>
                 </div>
             </div>
         </div>
