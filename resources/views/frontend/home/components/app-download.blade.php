@@ -1,4 +1,4 @@
-<section class="fp__download mt_100 xs_mt_70">
+<!-- <section class="fp__download mt_100 xs_mt_70">
     <div class="fp__download_bg" style="background: url({{ @$appSection->background }});">
         <div class="fp__download_overlay">
             <div class="container">
@@ -39,4 +39,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->

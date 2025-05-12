@@ -8,8 +8,8 @@
                     <span>
                         <img src="images/heading_shapes.png" alt="shapes" class="img-fluid w-100">
                     </span>
-                    <p>Objectively pontificate quality models before intuitive information. Dramatically
-                        recaptiualize multifunctional materials.</p>
+                    <!-- <p>Objectively pontificate quality models before intuitive information. Dramatically
+                        recaptiualize multifunctional materials.</p> -->
                 </div>
             </div>
         </div>

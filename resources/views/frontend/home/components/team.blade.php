@@ -1,4 +1,4 @@
-<section class="fp__team pt_95 xs_pt_65 pb_50">
+<!-- <section class="fp__team pt_95 xs_pt_65 pb_50">
     <div class="container">
 
         <div class="row wow fadeInUp" data-wow-duration="1s">
@@ -44,4 +44,4 @@
             @endforeach
         </div>
     </div>
-</section>
+</section> -->

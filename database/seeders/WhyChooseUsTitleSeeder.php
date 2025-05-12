@@ -24,7 +24,7 @@ class WhyChooseUsTitleSeeder extends Seeder
             ],
             [
                 'key' => 'why_choose_sub_title',
-                'value' => 'Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.'
+                'value' => 'Chúng tôi mang đến món ăn nóng hổi, chuẩn vị, giao hàng nhanh chóng và dịch vụ thân thiện. Nguyên liệu tươi mỗi ngày, thực đơn đa dạng, giá cả hợp lý – tất cả vì trải nghiệm ẩm thực tuyệt vời của bạn!'
             ]
 
         ]);

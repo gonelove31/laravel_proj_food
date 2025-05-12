@@ -8,7 +8,7 @@
                     <span>
                         <img src="{{ asset('frontend/images/heading_shapes.png') }}" alt="shapes" class="img-fluid w-100">
                     </span>
-                    <p>{!! @$sectionTitles['why_choose_sub_title'] !!}</p>
+                    <p>Chúng tôi mang đến món ăn nóng hổi, chuẩn vị, giao hàng nhanh chóng và dịch vụ thân thiện. Nguyên liệu tươi mỗi ngày, thực đơn đa dạng, giá cả hợp lý – tất cả vì trải nghiệm ẩm thực tuyệt vời của bạn!</p>
                 </div>
             </div>
         </div>

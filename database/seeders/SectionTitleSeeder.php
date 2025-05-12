@@ -30,7 +30,7 @@ class SectionTitleSeeder extends Seeder
             array(
                 "id" => 6,
                 "key" => "why_choose_sub_title",
-                "value" => "Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.",
+                "value" => "Chúng tôi mang đến món ăn nóng hổi, chuẩn vị, giao hàng nhanh chóng và dịch vụ thân thiện. Nguyên liệu tươi mỗi ngày, thực đơn đa dạng, giá cả hợp lý – tất cả vì trải nghiệm ẩm thực tuyệt vời của bạn!",
                 "created_at" => "2023-07-16 06:05:48",
                 "updated_at" => "2023-09-02 10:42:34",
             ),
@@ -51,7 +51,7 @@ class SectionTitleSeeder extends Seeder
             array(
                 "id" => 9,
                 "key" => "daily_offer_sub_title",
-                "value" => "Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.",
+                "value" => "Chúng tôi mang đến món ăn nóng hổi, chuẩn vị, giao hàng nhanh chóng và dịch vụ thân thiện. Nguyên liệu tươi mỗi ngày, thực đơn đa dạng, giá cả hợp lý – tất cả vì trải nghiệm ẩm thực tuyệt vời của bạn!",
                 "created_at" => "2023-09-02 10:41:02",
                 "updated_at" => "2023-09-02 10:41:02",
             ),
@@ -72,7 +72,7 @@ class SectionTitleSeeder extends Seeder
             array(
                 "id" => 12,
                 "key" => "chef_sub_title",
-                "value" => "Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.",
+                "value" => "Chúng tôi mang đến món ăn nóng hổi, chuẩn vị, giao hàng nhanh chóng và dịch vụ thân thiện. Nguyên liệu tươi mỗi ngày, thực đơn đa dạng, giá cả hợp lý – tất cả vì trải nghiệm ẩm thực tuyệt vời của bạn!",
                 "created_at" => "2023-09-04 04:18:09",
                 "updated_at" => "2023-09-04 04:18:09",
             ),
@@ -93,7 +93,7 @@ class SectionTitleSeeder extends Seeder
             array(
                 "id" => 15,
                 "key" => "testimonial_sub_title",
-                "value" => "Objectively pontificate quality models before intuitive information. Dramatically recaptiualize multifunctional materials.",
+                "value" => "Chúng tôi mang đến món ăn nóng hổi, chuẩn vị, giao hàng nhanh chóng và dịch vụ thân thiện. Nguyên liệu tươi mỗi ngày, thực đơn đa dạng, giá cả hợp lý – tất cả vì trải nghiệm ẩm thực tuyệt vời của bạn!",
                 "created_at" => "2023-09-05 04:24:02",
                 "updated_at" => "2023-09-05 04:24:02",
             ),

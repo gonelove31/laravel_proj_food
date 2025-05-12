@@ -4,11 +4,11 @@
             <div class="col-md-8 col-lg-7 col-xl-6 m-auto text-center">
                 <div class="fp__section_heading mb_50">
                     <h4>Ưu đãi đặc biệt</h4>
-                    <h2>{!! @$sectionTitles['daily_offer_main_title'] !!}</h2>
+                    <h2>Nhanh tay đặt ngay kẻo lỡ!</h2>
                     <span>
                         <img src="{{ asset('frontend/images/heading_shapes.png') }}" alt="shapes" class="img-fluid w-100">
                     </span>
-                    <p>{!! @$sectionTitles['daily_offer_sub_title'] !!}</p>
+                    <p>Mỗi ngày một bất ngờ hấp dẫn! Giảm giá món ngon, combo siêu hời và khuyến mãi độc quyền chỉ có hôm nay. Nhanh tay đặt ngay kẻo lỡ!</p>
                 </div>
             </div>
         </div>
