@@ -12,8 +12,8 @@
                         <div class="fp__download_text">
                             <div class="fp__section_heading mb_25">
                                 <h4>Tải ứng dụng</h4>
-                                <h2>Tải ứng dụng FoodPark ngay hôm nay</h2>
-                                <p>Đặt món ăn yêu thích của bạn trực tuyến từ ứng dụng di động của chúng tôi. Tải xuống ứng dụng FoodPark ngay hôm nay và nhận ưu đãi đặc biệt cho lần đặt hàng đầu tiên của bạn.</p>
+                                <h2>Tải ứng dụng Dolphin ngay hôm nay</h2>
+                                <p>Đặt món ăn yêu thích của bạn trực tuyến từ ứng dụng di động của chúng tôi. Tải xuống ứng dụng Dolphin ngay hôm nay và nhận ưu đãi đặc biệt cho lần đặt hàng đầu tiên của bạn.</p>
                             </div>
                             <ul class="d-flex flex-wrap">
                                 @if (@$appSection->play_store_link)

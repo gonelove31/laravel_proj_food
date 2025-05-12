@@ -5,7 +5,7 @@
             <div class="col-md-8 col-lg-7 col-xl-6 m-auto text-center">
                 <div class="fp__section_heading mb_25">
                     <h4>Đội ngũ của chúng tôi</h4>
-                    <h2>Đội ngũ chuyên nghiệp của FoodPark</h2>
+                    <h2>Đội ngũ chuyên nghiệp của Dolphin</h2>
                     <span>
                         {{-- <img src="{{ asset('frontend/images/heading_shapes.png') }}" alt="shapes" class="img-fluid w-100"> --}}
                     </span>

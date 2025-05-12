@@ -65,7 +65,7 @@
                 </li>
                 <li>
                     <a class="common_btn" href="#" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop">reservation</a>
+                        data-bs-target="#staticBackdrop">Đặt Bàn</a>
                 </li>
             </ul>
         </div>

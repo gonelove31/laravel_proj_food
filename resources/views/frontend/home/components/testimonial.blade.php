@@ -8,7 +8,7 @@
                     <span>
                         <img src="images/heading_shapes.png" alt="shapes" class="img-fluid w-100">
                     </span>
-                    <p>Lắng nghe những chia sẻ chân thực từ khách hàng về trải nghiệm của họ với FoodPark</p>
+                    <p>Lắng nghe những chia sẻ chân thực từ khách hàng về trải nghiệm của họ với Dolphin</p>
                 </div>
             </div>
         </div>

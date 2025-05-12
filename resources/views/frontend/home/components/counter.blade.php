@@ -43,6 +43,6 @@
     </div>
 </section>
 
-<h4>Thống kê</h4>
+<!-- <h4>Thống kê</h4>
 <h2>FoodPark trong số liệu</h2>
-<p>Những con số ấn tượng về sự phát triển của chúng tôi</p>
+<p>Những con số ấn tượng về sự phát triển của chúng tôi</p> -->
