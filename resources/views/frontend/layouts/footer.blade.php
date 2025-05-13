@@ -13,7 +13,7 @@
                 <div class="col-lg-4 col-sm-8 col-md-6">
                     <div class="fp__footer_content">
                         <a class="footer_logo" href="index.html">
-                            <img src="https://www.pngkey.com/png/detail/519-5196907_logo-design-fast-food-restaurant-logo-design.png" alt="FoodPark" class="img-fluid w-100">
+                            <img src="{{ asset('uploads/logo_dolphin.png') }}" alt="FoodPark" class="img-fluid ">
                         </a>
                         @if (@$footerInfo->short_info)
                         <span>{{ @$footerInfo->short_info }}</span>

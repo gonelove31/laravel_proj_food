@@ -5,7 +5,7 @@
 <nav class="navbar navbar-expand-lg main_menu">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="https://www.pngkey.com/png/detail/519-5196907_logo-design-fast-food-restaurant-logo-design.png" alt="FoodPark" class="img-fluid">
+            <img src="{{ asset('uploads/logo_dolphin.png') }}" alt="FoodPark" class="img-fluid" style="max-width: 120px; height: auto; display: block; margin: 0 auto;">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
