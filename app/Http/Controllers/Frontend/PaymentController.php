@@ -108,7 +108,10 @@ class PaymentController extends Controller
 
         /** calculate payable amount */
         $grandTotal = session()->get('grand_total');
-        $payableAmount = round($grandTotal * config('gatewaySettings.paypal_rate'));
+        
+        // Convert VND to USD (using approximate exchange rate)
+        $vndToUsdRate = 0.000041; // 1 VND = 0.000041 USD (approximate)
+        $payableAmount = round($grandTotal * $vndToUsdRate, 2);
 
         $response = $provider->createOrder([
             'intent' => "CAPTURE",
@@ -119,7 +122,7 @@ class PaymentController extends Controller
             'purchase_units' => [
                 [
                     'amount' => [
-                        'currency_code' => config('gatewaySettings.paypal_currency'),
+                        'currency_code' => 'USD', // Force USD currency
                         'value' => $payableAmount
                     ]
                 ]

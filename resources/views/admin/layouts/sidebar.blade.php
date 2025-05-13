@@ -27,9 +27,9 @@
                 class="nav-link notification-toggle nav-link-lg notification_beep {{ count($notifications) > 0 ? 'beep' : '' }}"><i
                     class="far fa-bell"></i></a>
             <div class="dropdown-menu dropdown-list dropdown-menu-right">
-                <div class="dropdown-header">Notifications
+                <div class="dropdown-header">Thông báo
                     <div class="float-right">
-                        <a href="{{ route('admin.clear-notification') }}">Mark All As Read</a>
+                        <a href="{{ route('admin.clear-notification') }}">Đánh dấu đã đọc tất cả</a>
                     </div>
                 </div>
                 <div class="dropdown-list-content dropdown-list-icons rt_notification">
@@ -48,7 +48,7 @@
 
                 </div>
                 <div class="dropdown-footer text-center">
-                    <a href="{{ route('admin.orders.index') }}">View All <i class="fas fa-chevron-right"></i></a>
+                    <a href="{{ route('admin.orders.index') }}">Xem tất cả <i class="fas fa-chevron-right"></i></a>
                 </div>
             </div>
         </li>
@@ -60,10 +60,10 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a href="{{ route('admin.profile') }}" class="dropdown-item has-icon">
-                    <i class="far fa-user"></i> Profile
+                    <i class="far fa-user"></i> Hồ sơ
                 </a>
                 <a href="{{ route('admin.setting.index') }}" class="dropdown-item has-icon">
-                    <i class="fas fa-cog"></i> Settings
+                    <i class="fas fa-cog"></i> Cài đặt
                 </a>
                 <div class="dropdown-divider"></div>
                 <!-- Authentication -->
@@ -74,7 +74,7 @@
                         onclick="event.preventDefault();
                     this.closest('form').submit();"
                         class="dropdown-item has-icon text-danger">
-                        <i class="fas fa-sign-out-alt"></i> Logout
+                        <i class="fas fa-sign-out-alt"></i> Đăng xuất
                     </a>
                 </form>
 
@@ -91,18 +91,18 @@
             <a href="index.html">St</a>
         </div>
         <ul class="sidebar-menu">
-            <li class="menu-header">Dashboard</li>
+            <li class="menu-header">Bảng điều khiển</li>
             <li class="{{ setSidebarActive(['admin.dashboard']) }}"><a class="nav-link" href="{{ route('admin.dashboard') }}"><i class="fas fa-fire"></i>
-                    Dashboard</a>
+                    Bảng điều khiển</a>
             </li>
 
-            <li class="menu-header">Starter</li>
+            <li class="menu-header">Quản lý</li>
 
             <li class="{{ setSidebarActive(['admin.slider.*']) }}"><a class="nav-link" href="{{ route('admin.slider.index') }}"><i class="fas fa-images"></i>
                     <span>Slider</span></a></li>
 
             <li class="{{ setSidebarActive(['admin.daily-offer.*']) }}"><a class="nav-link" href="{{ route('admin.daily-offer.index') }}"><i class="far fa-clock"></i>
-                    <span>Daily Offer</span></a></li>
+                    <span>Khuyến mãi hàng ngày</span></a></li>
 
             <li class="dropdown {{ setSidebarActive([
                 'admin.orders.index',
@@ -112,13 +112,13 @@
                 'admin.declined-orders'
             ]) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-box"></i>
-                    <span>Orders </span></a>
+                    <span>Đơn hàng</span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ setSidebarActive(['admin.orders.index']) }}"><a class="nav-link" href="{{ route('admin.orders.index') }}">All Orders</a></li>
-                    <li class="{{ setSidebarActive(['admin.pending-orders']) }}" ><a class="nav-link" href="{{ route('admin.pending-orders') }}">Pending Orders</a></li>
-                    <li class="{{ setSidebarActive(['admin.inprocess-orders']) }}" ><a class="nav-link" href="{{ route('admin.inprocess-orders') }}">In Process Orders</a></li>
-                    <li class="{{ setSidebarActive(['admin.delivered-orders']) }}" ><a class="nav-link" href="{{ route('admin.delivered-orders') }}">Delivered Orders</a></li>
-                    <li class="{{ setSidebarActive(['admin.declined-orders']) }}" ><a class="nav-link" href="{{ route('admin.declined-orders') }}">Decliend Orders</a></li>
+                    <li class="{{ setSidebarActive(['admin.orders.index']) }}"><a class="nav-link" href="{{ route('admin.orders.index') }}">Tất cả đơn hàng</a></li>
+                    <li class="{{ setSidebarActive(['admin.pending-orders']) }}" ><a class="nav-link" href="{{ route('admin.pending-orders') }}">Đơn hàng chờ xử lý</a></li>
+                    <li class="{{ setSidebarActive(['admin.inprocess-orders']) }}" ><a class="nav-link" href="{{ route('admin.inprocess-orders') }}">Đơn hàng đang xử lý</a></li>
+                    <li class="{{ setSidebarActive(['admin.delivered-orders']) }}" ><a class="nav-link" href="{{ route('admin.delivered-orders') }}">Đơn hàng đã giao</a></li>
+                    <li class="{{ setSidebarActive(['admin.declined-orders']) }}" ><a class="nav-link" href="{{ route('admin.declined-orders') }}">Đơn hàng đã hủy</a></li>
                 </ul>
             </li>
 
@@ -128,11 +128,11 @@
                 'admin.product-reviews.index',
             ]) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-shopping-cart"></i>
-                    <span>Manage Products </span></a>
+                    <span>Quản lý sản phẩm</span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ setSidebarActive(['admin.category.*']) }}" ><a class="nav-link" href="{{ route('admin.category.index') }}">Product Categories</a></li>
-                    <li class="{{ setSidebarActive(['admin.product.*']) }}" ><a class="nav-link" href="{{ route('admin.product.index') }}">Products</a></li>
-                    <li class="{{ setSidebarActive(['admin.product-reviews.index']) }}" ><a class="nav-link" href="{{ route('admin.product-reviews.index') }}">Product Reviews</a>
+                    <li class="{{ setSidebarActive(['admin.category.*']) }}" ><a class="nav-link" href="{{ route('admin.category.index') }}">Danh mục sản phẩm</a></li>
+                    <li class="{{ setSidebarActive(['admin.product.*']) }}" ><a class="nav-link" href="{{ route('admin.product.index') }}">Sản phẩm</a></li>
+                    <li class="{{ setSidebarActive(['admin.product-reviews.index']) }}" ><a class="nav-link" href="{{ route('admin.product-reviews.index') }}">Đánh giá sản phẩm</a>
                     </li>
                 </ul>
             </li>
@@ -143,11 +143,11 @@
                 'admin.payment-setting.index',
             ]) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-store"></i>
-                    <span> Manage Ecommerce </span></a>
+                    <span>Quản lý thương mại</span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ setSidebarActive(['admin.coupon.*']) }}" ><a class="nav-link" href="{{ route('admin.coupon.index') }}">Coupon</a></li>
-                    <li class="{{ setSidebarActive(['admin.delivery-area.*']) }}" ><a class="nav-link" href="{{ route('admin.delivery-area.index') }}">Delivery Areas</a></li>
-                    <li class="{{ setSidebarActive(['admin.payment-setting.index']) }}" ><a class="nav-link" href="{{ route('admin.payment-setting.index') }}">Payment Gateways</a>
+                    <li class="{{ setSidebarActive(['admin.coupon.*']) }}" ><a class="nav-link" href="{{ route('admin.coupon.index') }}">Mã giảm giá</a></li>
+                    <li class="{{ setSidebarActive(['admin.delivery-area.*']) }}" ><a class="nav-link" href="{{ route('admin.delivery-area.index') }}">Khu vực giao hàng</a></li>
+                    <li class="{{ setSidebarActive(['admin.payment-setting.index']) }}" ><a class="nav-link" href="{{ route('admin.payment-setting.index') }}">Cổng thanh toán</a>
                     </li>
 
                 </ul>
@@ -158,16 +158,16 @@
                 'admin.reservation.index',
             ]) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-chair"></i>
-                    <span>Manage Reservations </span></a>
+                    <span>Quản lý đặt bàn</span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ setSidebarActive(['admin.reservation-time.*']) }}" ><a class="nav-link" href="{{ route('admin.reservation-time.index') }}">Reservation Times</a></li>
-                    <li class="{{ setSidebarActive(['admin.reservation.index']) }}" ><a class="nav-link" href="{{ route('admin.reservation.index') }}">Reservation</a></li>
+                    <li class="{{ setSidebarActive(['admin.reservation-time.*']) }}" ><a class="nav-link" href="{{ route('admin.reservation-time.index') }}">Thời gian đặt bàn</a></li>
+                    <li class="{{ setSidebarActive(['admin.reservation.index']) }}" ><a class="nav-link" href="{{ route('admin.reservation.index') }}">Đặt bàn</a></li>
                 </ul>
             </li>
 
             @if (auth()->user()->id === 1)
                 <li class="{{ setSidebarActive(['admin.chat.index']) }}"><a class="nav-link" href="{{ route('admin.chat.index') }}"><i class="fas fa-comment-dots"></i>
-                        <span>Messages</span></a></li>
+                        <span>Tin nhắn</span></a></li>
             @endif
 
             <li class="dropdown {{ setSidebarActive([
@@ -176,11 +176,11 @@
                 'admin.blogs.comments.index'
             ]) }}">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-rss"></i>
-                    <span> Blog </span></a>
+                    <span>Blog</span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ setSidebarActive(['admin.blog-category.*']) }}" ><a class="nav-link" href="{{ route('admin.blog-category.index') }}">Categories</a></li>
-                    <li class="{{ setSidebarActive(['admin.blogs.*']) }}" ><a class="nav-link" href="{{ route('admin.blogs.index') }}">All Blogs</a></li>
-                    <li class="{{ setSidebarActive(['admin.blogs.comments.index']) }}" ><a class="nav-link" href="{{ route('admin.blogs.comments.index') }}">Comments</a></li>
+                    <li class="{{ setSidebarActive(['admin.blog-category.*']) }}" ><a class="nav-link" href="{{ route('admin.blog-category.index') }}">Danh mục</a></li>
+                    <li class="{{ setSidebarActive(['admin.blogs.*']) }}" ><a class="nav-link" href="{{ route('admin.blogs.index') }}">Tất cả bài viết</a></li>
+                    <li class="{{ setSidebarActive(['admin.blogs.comments.index']) }}" ><a class="nav-link" href="{{ route('admin.blogs.comments.index') }}">Bình luận</a></li>
                     </li>
                 </ul>
             </li>
@@ -195,20 +195,20 @@
             'admin.counter.index'
         ]) }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-stream"></i>
-                <span>Sections </span></a>
+                <span>Phần trang</span></a>
             <ul class="dropdown-menu">
-                <li class="{{ setSidebarActive(['admin.why-choose-us.*']) }}"><a class="nav-link" href="{{ route('admin.why-choose-us.index') }}">Why choose us</a></li>
-                <li class="{{ setSidebarActive(['admin.banner-slider.*']) }}"><a class="nav-link" href="{{ route('admin.banner-slider.index') }}">Banner Slider</a></li>
-                <li class="{{ setSidebarActive(['admin.chefs.*']) }}"><a class="nav-link" href="{{ route('admin.chefs.index') }}">Chefs</a></li>
-                <li class="{{ setSidebarActive(['admin.app-download.index']) }}"><a class="nav-link" href="{{ route('admin.app-download.index') }}">App Download Section</a>
-                </li>
-                <li class="{{ setSidebarActive(['admin.testimonial.*']) }}"><a class="nav-link" href="{{ route('admin.testimonial.index') }}">Testimonial</a></li>
-                <li class="{{ setSidebarActive(['admin.counter.index']) }}"><a class="nav-link" href="{{ route('admin.counter.index') }}">Counter</a></li>
+                <li class="{{ setSidebarActive(['admin.why-choose-us.*']) }}"><a class="nav-link" href="{{ route('admin.why-choose-us.index') }}">Tại sao chọn chúng tôi</a></li>
+                <li class="{{ setSidebarActive(['admin.banner-slider.*']) }}"><a class="nav-link" href="{{ route('admin.banner-slider.index') }}">Banner</a></li>
+                <li class="{{ setSidebarActive(['admin.chefs.*']) }}"><a class="nav-link" href="{{ route('admin.chefs.index') }}">Đầu bếp</a></li>
+                <!-- <li class="{{ setSidebarActive(['admin.app-download.index']) }}"><a class="nav-link" href="{{ route('admin.app-download.index') }}">Tải ứng dụng</a>
+                </li> -->
+                <li class="{{ setSidebarActive(['admin.testimonial.*']) }}"><a class="nav-link" href="{{ route('admin.testimonial.index') }}">Đánh giá</a></li>
+                <li class="{{ setSidebarActive(['admin.counter.index']) }}"><a class="nav-link" href="{{ route('admin.counter.index') }}">Bộ đếm</a></li>
 
             </ul>
         </li>
 
-        <li class="dropdown {{ setSidebarActive([
+        <!-- <li class="dropdown {{ setSidebarActive([
             'admin.custom-page-builder.*',
             'admin.about.index',
             'admin.trams-and-conditions.index',
@@ -216,37 +216,36 @@
             'admin.privacy-policy.index',
         ]) }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-file-alt"></i>
-                <span>Pages </span></a>
+                <span>Trang</span></a>
             <ul class="dropdown-menu">
-                <li class="{{ setSidebarActive(['admin.custom-page-builder.*']) }}" ><a class="nav-link" href="{{ route('admin.custom-page-builder.index') }}">Custom Page</a></li>
+                <li class="{{ setSidebarActive(['admin.custom-page-builder.*']) }}" ><a class="nav-link" href="{{ route('admin.custom-page-builder.index') }}">Trang tùy chỉnh</a></li>
 
-                <li class="{{ setSidebarActive(['admin.about.index']) }}" ><a class="nav-link" href="{{ route('admin.about.index') }}">About</a></li>
-                <li class="{{ setSidebarActive(['admin.privacy-policy.index']) }}" ><a class="nav-link" href="{{ route('admin.privacy-policy.index') }}">Privacy Policy</a></li>
-                <li class="{{ setSidebarActive(['admin.trams-and-conditions.index']) }}" ><a class="nav-link" href="{{ route('admin.trams-and-conditions.index') }}">Trams and
-                        Conditions</a></li>
-                <li class="{{ setSidebarActive(['admin.contact.index']) }}" ><a class="nav-link" href="{{ route('admin.contact.index') }}">Contact</a></li>
+                <li class="{{ setSidebarActive(['admin.about.index']) }}" ><a class="nav-link" href="{{ route('admin.about.index') }}">Giới thiệu</a></li>
+                <li class="{{ setSidebarActive(['admin.privacy-policy.index']) }}" ><a class="nav-link" href="{{ route('admin.privacy-policy.index') }}">Chính sách bảo mật</a></li>
+                <li class="{{ setSidebarActive(['admin.trams-and-conditions.index']) }}" ><a class="nav-link" href="{{ route('admin.trams-and-conditions.index') }}">Điều khoản và điều kiện</a></li>
+                <li class="{{ setSidebarActive(['admin.contact.index']) }}" ><a class="nav-link" href="{{ route('admin.contact.index') }}">Liên hệ</a></li>
 
             </ul>
-        </li>
+        </li> -->
 
-        <li class="{{ setSidebarActive(['admin.news-letter.index']) }}"><a class="nav-link" href="{{ route('admin.news-letter.index') }}"><i class="fas fa-newspaper"></i>
-                <span>News Letter</span></a></li>
+        <!-- <li class="{{ setSidebarActive(['admin.news-letter.index']) }}"><a class="nav-link" href="{{ route('admin.news-letter.index') }}"><i class="fas fa-newspaper"></i>
+                <span>Bản tin</span></a></li> -->
 
-        <li class="{{ setSidebarActive(['admin.social-link.*']) }}"><a class="nav-link" href="{{ route('admin.social-link.index') }}"><i class="fas fa-link"></i>
-                <span>Social Links</span></a></li>
+        <!-- <li class="{{ setSidebarActive(['admin.social-link.*']) }}"><a class="nav-link" href="{{ route('admin.social-link.index') }}"><i class="fas fa-link"></i>
+                <span>Liên kết mạng xã hội</span></a></li> -->
 
-        <li class="{{ setSidebarActive(['admin.footer-info.index']) }}"><a class="nav-link" href="{{ route('admin.footer-info.index') }}"> <i class="fas fa-info-circle"></i> <span>Footer Info</span></a></li>
+        <!-- <li class="{{ setSidebarActive(['admin.footer-info.index']) }}"><a class="nav-link" href="{{ route('admin.footer-info.index') }}"> <i class="fas fa-info-circle"></i> <span>Thông tin chân trang</span></a></li>
 
         <li class="{{ setSidebarActive(['admin.menu-builder.index']) }}"><a class="nav-link" href="{{ route('admin.menu-builder.index') }}"><i class="fas fa-list-alt"></i>
-            <span>Menu Builder</span></a></li>
+            <span>Xây dựng menu</span></a></li> -->
 
         <li class="{{ setSidebarActive(['admin.admin-management.*']) }}"><a class="nav-link" href="{{ route('admin.admin-management.index') }}"><i class="fas fa-user-shield"></i>
-            <span>Admin Management</span></a></li>
+            <span>Quản lý admin</span></a></li>
 
         <li class="{{ setSidebarActive(['admin.setting.index']) }}"><a class="nav-link" href="{{ route('admin.setting.index') }}"><i class="fas fa-cogs"></i>
-                <span>Settings</span></a></li>
+                <span>Cài đặt</span></a></li>
 
         <li class="{{ setSidebarActive(['admin.clear-database.index*']) }}"><a class="nav-link" href="{{ route('admin.clear-database.index') }}"><i class="fas fa-exclamation-triangle"></i>
-                <span>Clear Database</span></a></li>
+                <span>Xóa cơ sở dữ liệu</span></a></li>
     </aside>
 </div>

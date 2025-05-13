@@ -105,10 +105,12 @@
 
                                     $qty = $orderItem->qty;
                                     $untiPrice = $orderItem->unit_price;
-                                    $sizePrice = $size->price;
+                                    $sizePrice = $size ? $size->price : 0;
                                     $optionPrice = 0;
-                                    foreach ($options as $optionItem) {
-                                        $optionPrice += $optionItem->price;
+                                    if ($options) {
+                                        foreach ($options as $optionItem) {
+                                            $optionPrice += $optionItem->price;
+                                        }
                                     }
 
                                     $productTotal = ($untiPrice + $sizePrice + $optionPrice) * $qty;
@@ -117,14 +119,18 @@
                                     <td>{{ ++$loop->index }}</td>
                                     <td>{{ $orderItem->product_name }}</td>
                                     <td>
-                                        <b>{{ @$size->name }} ({{ currencyPosition(@$size->price) }})</b>
-                                        <br>
-                                        options:
-                                        <br>
-                                        @foreach ($options as $option)
-                                        {{ @$option->name }} ({{ currencyPosition(@$option->price) }})
-                                        <br>
-                                        @endforeach
+                                        @if($size)
+                                            <b>{{ @$size->name }} ({{ currencyPosition(@$size->price) }})</b>
+                                            <br>
+                                        @endif
+                                        @if($options)
+                                            options:
+                                            <br>
+                                            @foreach ($options as $option)
+                                            {{ @$option->name }} ({{ currencyPosition(@$option->price) }})
+                                            <br>
+                                            @endforeach
+                                        @endif
                                     </td>
 
                                     <td class="text-center">{{ currencyPosition($orderItem->unit_price) }}</td>
