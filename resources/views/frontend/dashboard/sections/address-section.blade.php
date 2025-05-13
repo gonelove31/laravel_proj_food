@@ -1,6 +1,6 @@
 <div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-address-tab">
     <div class="fp_dashboard_body address_body">
-        <h3>address <a class="dash_add_new_address"><i class="far fa-plus"></i> add new
+        <h3>Địa chỉ <a class="dash_add_new_address"><i class="far fa-plus"></i> thêm mới
             </a>
         </h3>
         <div class="fp_dashboard_address show_edit_address">
@@ -40,13 +40,13 @@
                     @csrf
                     <div class="row">
                         <div class="col-12">
-                            <h4>add new address</h4>
+                            <h4>thêm địa chỉ mới</h4>
                         </div>
 
                         <div class="col-md-12 col-lg-12 col-xl-12">
                             <div class="fp__check_single_form">
                                 <select id="select_js3" name="area">
-                                    <option value="">Slelect Area</option>
+                                    <option value="">Chọn khu vực</option>
                                     @foreach ($deliveryAreas as $area)
                                         <option value="{{ $area->id }}">{{ $area->area_name }}</option>
                                     @endforeach
@@ -57,18 +57,18 @@
 
                         <div class="col-md-6 col-lg-12 col-xl-6">
                             <div class="fp__check_single_form">
-                                <input type="text" placeholder="First Name" name="first_name">
+                                <input type="text" placeholder="Tên" name="first_name">
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-12 col-xl-6">
                             <div class="fp__check_single_form">
-                                <input type="text" placeholder="Last Name" name="last_name">
+                                <input type="text" placeholder="Họ" name="last_name">
                             </div>
                         </div>
 
                         <div class="col-md-6 col-lg-12 col-xl-6">
                             <div class="fp__check_single_form">
-                                <input type="text" placeholder="Phone" name="phone">
+                                <input type="text" placeholder="Số điện thoại" name="phone">
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-12 col-xl-6">
@@ -79,7 +79,7 @@
 
                         <div class="col-md-12 col-lg-12 col-xl-12">
                             <div class="fp__check_single_form">
-                                <textarea cols="3" rows="4" placeholder="Address" name="address"></textarea>
+                                <textarea cols="3" rows="4" placeholder="Địa chỉ" name="address"></textarea>
                             </div>
                         </div>
                         <div class="col-12">
@@ -88,22 +88,21 @@
                                     <input class="form-check-input" type="radio" name="type" id="flexRadioDefault1"
                                         value="home">
                                     <label class="form-check-label" for="flexRadioDefault1">
-                                        home
+                                        Nhà riêng
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="type" id="flexRadioDefault2"
                                         value="office">
                                     <label class="form-check-label" for="flexRadioDefault2">
-                                        office
+                                        Văn phòng
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="button" class="common_btn cancel_new_address">cancel</button>
-                            <button type="submit" class="common_btn">save
-                                address</button>
+                            <button type="button" class="common_btn cancel_new_address">Hủy</button>
+                            <button type="submit" class="common_btn">Lưu địa chỉ</button>
                         </div>
                     </div>
                 </form>
@@ -115,13 +114,13 @@
                     @method('PUT')
                     <div class="row">
                         <div class="col-12">
-                            <h4>Edit Address</h4>
+                            <h4>Sửa địa chỉ</h4>
                         </div>
 
                         <div class="col-md-12 col-lg-12 col-xl-12">
                             <div class="fp__check_single_form">
                                 <select class="nice-select" name="area">
-                                    <option value="">Slelect Area</option>
+                                    <option value="">Chọn khu vực</option>
                                     @foreach ($deliveryAreas as $area)
                                         <option @selected($address->delivery_area_id === $area->id) value="{{ $area->id }}">{{ $area->area_name }}</option>
                                     @endforeach
@@ -132,18 +131,18 @@
 
                         <div class="col-md-6 col-lg-12 col-xl-6">
                             <div class="fp__check_single_form">
-                                <input type="text" placeholder="First Name" name="first_name" value="{{ $address->first_name }}">
+                                <input type="text" placeholder="Tên" name="first_name" value="{{ $address->first_name }}">
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-12 col-xl-6">
                             <div class="fp__check_single_form">
-                                <input type="text" placeholder="Last Name" name="last_name" value="{{ $address->last_name }}">
+                                <input type="text" placeholder="Họ" name="last_name" value="{{ $address->last_name }}">
                             </div>
                         </div>
 
                         <div class="col-md-6 col-lg-12 col-xl-6">
                             <div class="fp__check_single_form">
-                                <input type="text" placeholder="Phone" name="phone" value="{{ $address->phone }}">
+                                <input type="text" placeholder="Số điện thoại" name="phone" value="{{ $address->phone }}">
                             </div>
                         </div>
                         <div class="col-md-6 col-lg-12 col-xl-6">
@@ -154,7 +153,7 @@
 
                         <div class="col-md-12 col-lg-12 col-xl-12">
                             <div class="fp__check_single_form">
-                                <textarea cols="3" rows="4" placeholder="Address" name="address">{!! $address->address !!}</textarea>
+                                <textarea cols="3" rows="4" placeholder="Địa chỉ" name="address">{!! $address->address !!}</textarea>
                             </div>
                         </div>
                         <div class="col-12">
@@ -163,22 +162,21 @@
                                     <input @checked($address->type === 'home') class="form-check-input" type="radio" name="type"
                                         id="flexRadioDefault1" value="home">
                                     <label class="form-check-label" for="flexRadioDefault1">
-                                        home
+                                        Nhà riêng
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input @checked($address->type === 'office') class="form-check-input" type="radio" name="type"
                                         id="flexRadioDefault2" value="office">
                                     <label class="form-check-label" for="flexRadioDefault2">
-                                        office
+                                        Văn phòng
                                     </label>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="button" class="common_btn cancel_edit_address">cancel</button>
-                            <button type="submit" class="common_btn">save
-                                address</button>
+                            <button type="button" class="common_btn cancel_edit_address">Hủy</button>
+                            <button type="submit" class="common_btn">Lưu địa chỉ</button>
                         </div>
                     </div>
                 </form>

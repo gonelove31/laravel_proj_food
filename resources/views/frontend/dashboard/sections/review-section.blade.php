@@ -1,7 +1,7 @@
 <div class="tab-pane fade" id="v-pills-review" role="tabpanel"
 aria-labelledby="v-pills-review-tab">
 <div class="fp_dashboard_body dashboard_review">
-    <h3>review</h3>
+    <h3>Đánh giá</h3>
     <div class="fp__review_area">
         <div class="fp__comment pt-4 mt_20">
             @foreach ($reviews as $review)   
@@ -18,9 +18,9 @@ aria-labelledby="v-pills-review-tab">
                     </span>
                     <p>{{ $review->review }}</p>
                     @if ($review->status === 1)
-                    <span class="status active">Active</span>
+                    <span class="status active">Đã duyệt</span>
                     @else
-                    <span class="status inactive">Pending</span>
+                    <span class="status inactive">Chờ duyệt</span>
 
                     @endif
                 </div>
@@ -28,7 +28,7 @@ aria-labelledby="v-pills-review-tab">
             @endforeach
 
             @if (count($reviews) === 0)
-                <h5>No reviews added!</h5>
+                <h5>Chưa có đánh giá nào!</h5>
             @endif
         </div>
     </div>

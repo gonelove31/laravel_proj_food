@@ -1,17 +1,16 @@
 <div class="tab-pane fade" id="v-pills-reservation" role="tabpanel" aria-labelledby="v-pills-reservation-tab">
     <div class="fp_dashboard_body">
-        <h3>Reservations</h3>
+        <h3>Đặt bàn</h3>
         <div class="fp_dashboard_order">
             <div class="table-responsive">
                 <table class="table">
                     <tbody>
                         <tr class="t_header">
-                            <th>No</th>
-                            <th>Reseration Id</th>
-                            <th>Date/Time</th>
-                            <th>Person</th>
-                            <th>Status</th>
-
+                            <th>STT</th>
+                            <th>Mã đặt bàn</th>
+                            <th>Ngày/Giờ</th>
+                            <th>Số người</th>
+                            <th>Trạng thái</th>
                         </tr>
                         @foreach ($reservations as $reservation)
                         <tr>
@@ -29,19 +28,17 @@
                             </td>
                             <td>
                                 @if ($reservation->status === 'pending')
-                                <span class="active">Pending</span>
+                                <span class="active">Chờ xác nhận</span>
                                 @elseif ($reservation->status === 'approve')
-                                <span class="active">Approve</span>
+                                <span class="active">Đã xác nhận</span>
                                 @elseif ($reservation->status === 'complete')
-                                <span class="complete">Complete</span>
+                                <span class="complete">Hoàn thành</span>
                                 @elseif ($reservation->status === 'cancel')
-                                <span class="cancel">Cancel</span>
+                                <span class="cancel">Đã hủy</span>
                                 @endif
                             </td>
- 
                         </tr>
                         @endforeach
-
                     </tbody>
                 </table>
             </div>
@@ -51,9 +48,7 @@
             <a class="go_back d-print-none"><i class="fas fa-long-arrow-alt-left"></i> go back</a>
             <div class="fp__track_order d-print-none">
                 <ul>
-
                     @if ($order->order_status === 'declined')
-
                     <li class="
                     declined_status
                     {{ in_array($order->order_status, ['declined']) ? 'active' : '' }}
@@ -69,7 +64,6 @@
                     {{ in_array($order->order_status, ['delivered']) ? 'active' : '' }}
                     ">order delivered</li>
                     @endif
-                    {{-- <li>on decliend</li> --}}
                 </ul>
             </div>
             <div class="fp__invoice_header">
@@ -79,16 +73,12 @@
                     <p>{{ $order->address }}</p>
                     <p>{{ @$order->userAddress->phone }}</p>
                     <p>{{ @$order->userAddress->email }}</p>
-
                 </div>
                 <div class="header_address" style="width: 50%">
                     <p><b style="width: 140px">invoice no: </b><span>{{ @$order->invoice_id }}</span></p>
                     <p><b style="width: 140px">Payment Status: </b><span>{{ @$order->payment_status }}</span></p>
                     <p><b style="width: 140px">Payment Method: </b><span>{{ @$order->payment_method }}</span></p>
                     <p><b style="width: 140px">Transaction Id: </b><span>{{ @$order->transaction_id }}</span></p>
-
-
-
                     <p><b style="width: 140px">date:</b> <span>{{ date('d-m-Y', strtotime($order->created_at)) }}</span></p>
                 </div>
             </div>
@@ -103,7 +93,6 @@
                                 <th class="qnty">Quantity</th>
                                 <th class="total">Total</th>
                             </tr>
-
                             @foreach ($order->orderItems as $item)
                             @php
                                 $size = json_decode($item->product_size);
@@ -140,7 +129,6 @@
                                 </td>
                             </tr>
                             @endforeach
-
                         </tbody>
                         <tfoot>
                             <tr>
@@ -193,7 +181,6 @@
             </div>
             <a class="print_btn common_btn d-print-none" href="javascript:;" onclick="printInvoice('{{ $order->id }}')"><i class="far fa-print "></i> print
                 PDF</a>
-
         </div>
         @endforeach
     </div>

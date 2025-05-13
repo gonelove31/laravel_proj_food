@@ -9,10 +9,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>user dashboard</h1>
+                    <h1>Bảng điều khiển</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">dashboard</a></li>
+                        <li><a href="{{ url('/') }}">Trang chủ</a></li>
+                        <li><a href="javascript:;">Bảng điều khiển</a></li>
                     </ul>
                 </div>
             </div>
@@ -46,53 +46,53 @@
                                 aria-orientation="vertical">
                                 <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
-                                    aria-selected="true"><span><i class="fas fa-user"></i></span> Parsonal Info</button>
+                                    aria-selected="true"><span><i class="fas fa-user"></i></span> Thông tin cá nhân</button>
 
                                 <button class="nav-link" id="v-pills-address-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-address" type="button" role="tab"
                                     aria-controls="v-pills-address" aria-selected="true"><span><i
-                                            class="fas fa-user"></i></span>address</button>
+                                            class="fas fa-user"></i></span>Địa chỉ</button>
 
                                 <button class="nav-link" id="v-pills-reservation-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-reservation" type="button" role="tab"
                                 aria-controls="v-pills-reservation" aria-selected="false"><span><i
-                                        class="fas fa-bags-shopping"></i></span> Reservations</button>
+                                        class="fas fa-bags-shopping"></i></span> Đặt bàn</button>
 
                                 <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-profile" type="button" role="tab"
                                     aria-controls="v-pills-profile" aria-selected="false"><span><i
-                                            class="fas fa-bags-shopping"></i></span> Order</button>
+                                            class="fas fa-bags-shopping"></i></span> Đơn hàng</button>
 
                                 <button class="nav-link" id="v-pills-wishlist-tab2" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-wishlist" type="button" role="tab"
                                     aria-controls="v-pills-wishlist" aria-selected="false"><span><i
-                                            class="far fa-heart"></i></span> wishlist</button>
+                                            class="far fa-heart"></i></span> Danh sách yêu thích</button>
 
                                 <button class="nav-link" id="v-pills-review-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-review" type="button" role="tab"
                                     aria-controls="v-pills-review" aria-selected="false"><span><i
-                                            class="fas fa-star"></i></span> Reviews</button>
+                                            class="fas fa-star"></i></span> Đánh giá</button>
                                 @php
                                 $unseenMessages = \App\Models\Chat::where(['sender_id' => 1, 'receiver_id' => auth()->user()->id, 'seen' => 0])->count();
                                 @endphp
                                 <button class="nav-link fp_chat_message" id="v-pills-message-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-message" type="button" role="tab"
                                 aria-controls="v-pills-message" aria-selected="false"><span><i
-                                class="far fa-comment-dots"></i></span> Message
+                                class="far fa-comment-dots"></i></span> Tin nhắn
                                 <b class="sunseen-message-count">{{ $unseenMessages > 0 ? 1 : 0 }}</b>
                                 </button>
 
                                 <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-settings" type="button" role="tab"
                                     aria-controls="v-pills-settings" aria-selected="false"><span><i
-                                            class="fas fa-user-lock"></i></span> Change Password </button>
+                                            class="fas fa-user-lock"></i></span> Đổi mật khẩu</button>
                   <!-- Authentication -->
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
 
                                     <button style="width: 100%;" class="nav-link" onclick="event.preventDefault();
                                     this.closest('form').submit();" type="button"><span> <i class="fas fa-sign-out-alt"></i>
-                                    </span> Logout</button>
+                                    </span> Đăng xuất</button>
                                 </form>
                             </div>
                         </div>
@@ -149,34 +149,34 @@
                             <h4 class="price">$320.00 <del>$350.00</del> </h4>
 
                             <div class="details_size">
-                                <h5>select size</h5>
+                                <h5>Chọn kích thước</h5>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="large"
                                         checked>
                                     <label class="form-check-label" for="large">
-                                        large <span>+ $350</span>
+                                        Lớn <span>+ $350</span>
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="medium">
                                     <label class="form-check-label" for="medium">
-                                        medium <span>+ $250</span>
+                                        Vừa <span>+ $250</span>
                                     </label>
                                 </div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault" id="small">
                                     <label class="form-check-label" for="small">
-                                        small <span>+ $150</span>
+                                        Nhỏ <span>+ $150</span>
                                     </label>
                                 </div>
                             </div>
 
                             <div class="details_extra_item">
-                                <h5>select option <span>(optional)</span></h5>
+                                <h5>Chọn tùy chọn <span>(tùy chọn)</span></h5>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="coca-cola">
                                     <label class="form-check-label" for="coca-cola">
-                                        coca-cola <span>+ $10</span>
+                                        Coca-cola <span>+ $10</span>
                                     </label>
                                 </div>
                                 <div class="form-check">
@@ -188,7 +188,7 @@
                             </div>
 
                             <div class="details_quentity">
-                                <h5>select quentity</h5>
+                                <h5>Chọn số lượng</h5>
                                 <div class="quentity_btn_area d-flex flex-wrapa align-items-center">
                                     <div class="quentity_btn">
                                         <button class="btn btn-danger"><i class="fal fa-minus"></i></button>
@@ -199,7 +199,7 @@
                                 </div>
                             </div>
                             <ul class="details_button_area d-flex flex-wrap">
-                                <li><a class="common_btn" href="#">add to cart</a></li>
+                                <li><a class="common_btn" href="#">Thêm vào giỏ</a></li>
                             </ul>
                         </div>
                     </div>

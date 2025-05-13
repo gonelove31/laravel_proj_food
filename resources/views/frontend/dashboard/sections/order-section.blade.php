@@ -1,16 +1,16 @@
 <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
     <div class="fp_dashboard_body">
-        <h3>order list</h3>
+        <h3>Danh sách đơn hàng</h3>
         <div class="fp_dashboard_order">
             <div class="table-responsive">
                 <table class="table">
                     <tbody>
                         <tr class="t_header">
-                            <th>Order</th>
-                            <th>Date</th>
-                            <th>Status</th>
-                            <th>Amount</th>
-                            <th>Action</th>
+                            <th>Đơn hàng</th>
+                            <th>Ngày</th>
+                            <th>Trạng thái</th>
+                            <th>Số tiền</th>
+                            <th>Thao tác</th>
                         </tr>
                         @foreach ($orders as $order)
                         <tr>
@@ -22,22 +22,22 @@
                             </td>
                             <td>
                                 @if ($order->order_status === 'pending')
-                                <span class="active">Pending</span>
+                                <span class="active">Chờ xử lý</span>
                                 @elseif ($order->order_status === 'in_process')
-                                <span class="active">In Process</span>
+                                <span class="active">Đang xử lý</span>
                                 @elseif ($order->order_status === 'delivered')
-                                <span class="complete">Delivered</span>
+                                <span class="complete">Đã giao</span>
                                 @elseif ($order->order_status === 'declined')
-                                <span class="cancel">Declined</span>
+                                <span class="cancel">Đã hủy</span>
                                 @endif
                             </td>
                             <td>
                                 <h5>{{ currencyPosition($order->grand_total) }}</h5>
                             </td>
                             <td>
-                                <a class="view_invoice" onclick="viewInvoice('{{ $order->id }}')">View Details</a>
+                                <a class="view_invoice" onclick="viewInvoice('{{ $order->id }}')">Xem chi tiết</a>
                                 @if ($order->order_status === 'pending')
-                                <a href="javascript:;" class="cancel_order" onclick="openCancelModal('{{ $order->id }}')">Cancel Order</a>
+                                <a href="javascript:;" class="cancel_order" onclick="openCancelModal('{{ $order->id }}')">Hủy đơn</a>
                                 @endif
                             </td>
                         </tr>
@@ -49,24 +49,24 @@
         </div>
         @foreach ($orders as $order)
         <div class="fp__invoice invoice_details_{{ $order->id }}">
-            <a class="go_back d-print-none"><i class="fas fa-long-arrow-alt-left"></i> go back</a>
+            <a class="go_back d-print-none"><i class="fas fa-long-arrow-alt-left"></i> quay lại</a>
             <div class="fp__track_order d-print-none">
                 <ul>
                     @if ($order->order_status === 'declined')
                     <li class="
                     declined_status
                     {{ in_array($order->order_status, ['declined']) ? 'active' : '' }}
-                    ">order declined</li>
+                    ">đơn hàng đã hủy</li>
                     @else
                     <li class="
                     {{ in_array($order->order_status, ['pending', 'in_process', 'delivered', 'declined']) ? 'active' : '' }}
-                    ">order pending</li>
+                    ">đơn hàng chờ xử lý</li>
                     <li class="
                     {{ in_array($order->order_status, ['in_process', 'delivered', 'declined']) ? 'active' : '' }}
-                    ">order in process</li>
+                    ">đơn hàng đang xử lý</li>
                     <li class="
                     {{ in_array($order->order_status, ['delivered']) ? 'active' : '' }}
-                    ">order delivered</li>
+                    ">đơn hàng đã giao</li>
                     @endif
                     {{-- <li>on decliend</li> --}}
                 </ul>

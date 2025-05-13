@@ -2,7 +2,7 @@
     aria-labelledby="v-pills-message-tab">
     <div class="fp_dashboard_body fp__change_password">
         <div class="fp__message">
-            <h3>Message</h3>
+            <h3>Tin nhắn</h3>
             <div class="fp__chat_area">
                 <div class="fp__chat_body">
 
@@ -11,7 +11,7 @@
                     @csrf
 
                     <input  type="hidden"  name="msg_temp_id" class="msg_temp_id" value="">
-                    <input type="text" placeholder="Type a message..." name="message" class="fp_send_message">
+                    <input type="text" placeholder="Nhập tin nhắn..." name="message" class="fp_send_message">
                     <input type="hidden" name="receiver_id" value="1">
 
                     <button class="fp__massage_btn" type="submit"><i class="fas fa-paper-plane"
