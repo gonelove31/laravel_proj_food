@@ -95,7 +95,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="row mt_100 xs_mt_70">
+                <!-- <div class="row mt_100 xs_mt_70">
                     <div class="col-xl-12 wow fadeInUp" data-wow-duration="1s">
                         <div class="fp__contact_map">
                             <iframe
@@ -104,7 +104,7 @@
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

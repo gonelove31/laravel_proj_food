@@ -100,7 +100,7 @@
 
                             @if ($product->productOptions()->exists())
                                 <div class="details_extra_item">
-                                    <h5>select option <span>(optional)</span></h5>
+                                    <h5>Chọn option <span>(optional)</span></h5>
                                     @foreach ($product->productOptions as $productOption)
                                         <div class="form-check">
                                             <input class="form-check-input v_product_option" name="product_option[]"
@@ -116,7 +116,7 @@
                             @endif
 
                             <div class="details_quentity">
-                                <h5>select quentity</h5>
+                                <h5>Chọn Số Lượng</h5>
                                 <div class="quentity_btn_area d-flex flex-wrapa align-items-center">
                                     <div class="quentity_btn">
                                         <button class="btn btn-danger v_decrement"><i class="fal fa-minus"></i></button>
@@ -135,7 +135,7 @@
                             @if ($product->quantity === 0)
                             <li><a class="common_btn bg-danger" href="javascript:;">Stock Out</a></li>
                             @else
-                            <li><a class="common_btn v_submit_button"  href="#">add to cart</a></li>
+                            <li><a class="common_btn v_submit_button"  href="#">Thêm Vào Giỏ Hàng</a></li>
                             @endif
                             <li><a class="wishlist" href="#"><i class="far fa-heart"></i></a></li>
                         </ul>
@@ -147,12 +147,12 @@
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                    aria-selected="true">Description</button>
+                                    aria-selected="true">Mô Tả</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-contact" type="button" role="tab"
-                                    aria-controls="pills-contact" aria-selected="false">Reviews</button>
+                                    aria-controls="pills-contact" aria-selected="false">Đánh Giá </button>
                             </li>
                         </ul>
                         <div class="tab-content" id="pills-tabContent">

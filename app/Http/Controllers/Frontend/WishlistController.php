@@ -26,6 +26,6 @@ class WishlistController extends Controller
         $wishlist->product_id = $productId;
         $wishlist->save();
 
-        return response(['status' => 'success', 'message' => 'Product added to wishlist!']);
+        return response(['status' => 'success', 'message' => 'Sản Phẩm Đã Được Thêm Vào Danh Sách Yêu Thích!']);
     }
 }

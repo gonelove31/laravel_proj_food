@@ -8,10 +8,10 @@
         <div class="fp__breadcrumb_overlay">
             <div class="container">
                 <div class="fp__breadcrumb_text">
-                    <h1>about US</h1>
+                    <h1>Về chúng tôi</h1>
                     <ul>
-                        <li><a href="{{ url('/') }}">home</a></li>
-                        <li><a href="javascript:;">about us</a></li>
+                        <li><a href="{{ url('/') }}">Trang chủ</a></li>
+                        <li><a href="javascript:;">Về chúng tôi</a></li>
                     </ul>
                 </div>
             </div>
