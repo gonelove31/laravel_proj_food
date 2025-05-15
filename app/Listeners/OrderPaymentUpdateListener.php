@@ -28,7 +28,7 @@ class OrderPaymentUpdateListener
         $order->payment_status = $event->paymentInfo['status'];
         $order->payment_approve_date = now();
         $order->transaction_id = $event->paymentInfo['transaction_id'];
-        $order->currency_name = $event->paymentInfo['currency'];
+        $order->currency_name = "₫";
         $order->save();
     }
 }

@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Dashboard</h1>
+            <h1>Bảng Điều Khiển</h1>
         </div>
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
@@ -13,7 +13,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Todays Orders</h4>
+                            <h4>Đơn Hàng Hôm Nay</h4>
                         </div>
                         <div class="card-body">
                             {{ $todaysOrders }}
@@ -29,7 +29,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Todays Earnings</h4>
+                            <h4>Doanh Thu Hôm Nay</h4>
                         </div>
                         <div class="card-body">
                             {{ currencyPosition($todaysEarnings) }}
@@ -45,7 +45,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>This Month Orders</h4>
+                            <h4>Đơn Hàng Tháng Này</h4>
                         </div>
                         <div class="card-body">
                             {{ $thisMonthsOrders }}
@@ -61,7 +61,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>This Months Earnings</h4>
+                            <h4>Doanh Thu Tháng Này</h4>
                         </div>
                         <div class="card-body">
                             {{ currencyPosition($thisMonthsEarnings) }}
@@ -77,7 +77,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>This Year Orders</h4>
+                            <h4>Đơn Hàng Năm Nay</h4>
                         </div>
                         <div class="card-body">
                             {{ $thisYearOrders }}
@@ -93,7 +93,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>This Year Earnings</h4>
+                            <h4>Doanh Thu Năm Nay</h4>
                         </div>
                         <div class="card-body">
                             {{ currencyPosition($thisYearEarnings) }}
@@ -109,7 +109,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Orders</h4>
+                            <h4>Tổng Đơn Hàng</h4>
                         </div>
                         <div class="card-body">
                             {{ $totalOrders }}
@@ -125,7 +125,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Earnings</h4>
+                            <h4>Tổng Doanh Thu</h4>
                         </div>
                         <div class="card-body">
                             {{ currencyPosition($totalEarnings) }}
@@ -141,7 +141,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Users</h4>
+                            <h4>Tổng Người Dùng</h4>
                         </div>
                         <div class="card-body">
                             {{ $totalUsers }}
@@ -157,7 +157,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Admins</h4>
+                            <h4>Tổng Admin</h4>
                         </div>
                         <div class="card-body">
                             {{ $totalAdmins }}
@@ -173,7 +173,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Products</h4>
+                            <h4>Tổng Sản Phẩm</h4>
                         </div>
                         <div class="card-body">
                             {{ $totalProducts }}
@@ -189,7 +189,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Total Blogs</h4>
+                            <h4>Tổng Bài Viết</h4>
                         </div>
                         <div class="card-body">
                             {{ $totalBlogs }}
@@ -206,7 +206,7 @@
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>Todays Orders</h4>
+                <h4>Đơn Hàng Hôm Nay</h4>
             </div>
             <div class="card-body">
                 {{ $dataTable->table() }}
@@ -219,7 +219,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Tiêu Đề</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -229,21 +229,21 @@
                         @csrf
                         @method('PUT')
                         <div class="form-group">
-                            <label for="">Payment Status</label>
+                            <label for="">Trạng Thái Thanh Toán</label>
                             <select class="form-control payment_status" name="payment_status" id="">
-                                <option value="pending">Pending</option>
-                                <option value="completed">Completed</option>
+                                <option value="pending">Chờ Xử Lý</option>
+                                <option value="completed">Hoàn Thành</option>
                             </select>
 
                         </div>
 
                         <div class="form-group">
-                            <label for="">Order Status</label>
+                            <label for="">Trạng Thái Đơn Hàng</label>
                             <select class="form-control order_status" name="order_status" id="">
-                                <option value="pending">Pending</option>
-                                <option value="in_process">In Process</option>
-                                <option value="delivered">Delivered</option>
-                                <option value="declined">Declined</option>
+                                <option value="pending">Chờ Xử Lý</option>
+                                <option value="in_process">Đang Xử Lý</option>
+                                <option value="delivered">Đã Giao</option>
+                                <option value="declined">Đã Hủy</option>
 
                             </select>
                         </div>

@@ -3,12 +3,12 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Payment Gateway</h1>
+            <h1>Cổng Thanh Toán</h1>
         </div>
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>All Gateways</h4>
+                <h4>Tất Cả Cổng Thanh Toán</h4>
             </div>
             <div class="card-body">
                 <div class="row">

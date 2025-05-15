@@ -3,14 +3,14 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Reservation Times</h1>
+            <h1>Thời Gian Đặt Bàn</h1>
         </div>
         <div class="card card-primary">
             <div class="card-header">
-                <h4>All Times</h4>
+                <h4>Tất Cả Khung Giờ</h4>
                 <div class="card-header-action">
                     <a href="{{ route('admin.reservation-time.create') }}" class="btn btn-primary">
-                        Create new
+                        Tạo Mới
                     </a>
                 </div>
             </div>

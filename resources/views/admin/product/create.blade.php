@@ -3,12 +3,12 @@
 @section('content')
 <section class="section">
     <div class="section-header">
-        <h1>Product</h1>
+        <h1>Sản Phẩm</h1>
     </div>
 
     <div class="card card-primary">
         <div class="card-header">
-            <h4>Create Procut</h4>
+            <h4>Tạo Sản Phẩm</h4>
 
         </div>
         <div class="card-body">
@@ -16,22 +16,22 @@
                 @csrf
 
                 <div class="form-group">
-                    <label>Image</label>
+                    <label>Hình Ảnh</label>
                     <div id="image-preview" class="image-preview">
-                        <label for="image-upload" id="image-label">Choose File</label>
+                        <label for="image-upload" id="image-label">Chọn Tệp</label>
                         <input type="file" name="image" id="image-upload" />
                       </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Name</label>
+                    <label>Tên</label>
                     <input type="text" name="name" class="form-control" value="{{ old('name') }}">
                 </div>
 
                 <div class="form-group">
-                    <label>Category</label>
+                    <label>Danh Mục</label>
                     <select name="category" class="form-control select2" id="" >
-                        <option value="">select</option>
+                        <option value="">Chọn</option>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                         @endforeach
@@ -39,62 +39,62 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Price</label>
+                    <label>Giá</label>
                     <input type="text" name="price" class="form-control" value="{{ old('price') }}">
                 </div>
 
                 <div class="form-group">
-                    <label>Offer Price</label>
+                    <label>Giá Khuyến Mãi</label>
                     <input type="text" name="offer_price" class="form-control" value="{{ old('offer_price') }}">
                 </div>
 
                 <div class="form-group">
-                    <label>Quantity</label>
+                    <label>Số Lượng</label>
                     <input type="text" name="quantity" class="form-control" value="{{ old('quantity') }}">
                 </div>
 
                 <div class="form-group">
-                    <label>Short Description</label>
+                    <label>Mô Tả Ngắn</label>
                     <textarea name="short_description" class="form-control" id="">{{ old('short_description') }}</textarea>
                 </div>
 
                 <div class="form-group">
-                    <label>Long Description</label>
+                    <label>Mô Tả Chi Tiết</label>
                     <textarea name="long_description" class="form-control summernote" id="">{{ old('long_description') }}</textarea>
                 </div>
 
                 <div class="form-group">
-                    <label>Sku</label>
+                    <label>Mã SKU</label>
                     <input type="text" name="sku" class="form-control" value="{{ old('sku') }}">
                 </div>
 
                 <div class="form-group">
-                    <label>Seo Title</label>
+                    <label>Tiêu Đề SEO</label>
                     <input type="text" name="seo_title" class="form-control" value="{{ old('seo_title') }}">
                 </div>
 
                 <div class="form-group">
-                    <label>Seo Description</label>
+                    <label>Mô Tả SEO</label>
                     <textarea name="seo_description" class="form-control" id="">{{ old('seo_description') }}</textarea>
                 </div>
 
                 <div class="form-group">
-                    <label>Show at Home</label>
+                    <label>Hiển Thị Trang Chủ</label>
                     <select name="show_at_home" class="form-control" id="">
-                        <option value="1">Yes</option>
-                        <option selected value="0">No</option>
+                        <option value="1">Có</option>
+                        <option selected value="0">Không</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label>Status</label>
+                    <label>Trạng Thái</label>
                     <select name="status" class="form-control" id="">
-                        <option value="1">Active</option>
-                        <option value="0">Inactive</option>
+                        <option value="1">Hoạt Động</option>
+                        <option value="0">Không Hoạt Động</option>
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary">Tạo</button>
             </form>
         </div>
     </div>

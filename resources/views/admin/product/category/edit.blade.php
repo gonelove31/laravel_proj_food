@@ -3,12 +3,12 @@
 @section('content')
 <section class="section">
     <div class="section-header">
-        <h1>Category</h1>
+        <h1>Danh Mục</h1>
     </div>
 
     <div class="card card-primary">
         <div class="card-header">
-            <h4>Update Category</h4>
+            <h4>Cập Nhật Danh Mục</h4>
 
         </div>
         <div class="card-body">
@@ -16,27 +16,27 @@
                 @csrf
                 @method('PUT')
                 <div class="form-group">
-                    <label>Name</label>
+                    <label>Tên</label>
                     <input type="text" name="name" class="form-control" value="{{ $category->name }}">
                 </div>
 
                 <div class="form-group">
-                    <label>Show at Home</label>
+                    <label>Hiển Thị Trang Chủ</label>
                     <select name="show_at_home" class="form-control" id="">
-                        <option @selected($category->show_at_home === 1) value="1">Yes</option>
-                        <option @selected($category->show_at_home === 0) value="0">No</option>
+                        <option @selected($category->show_at_home === 1) value="1">Có</option>
+                        <option @selected($category->show_at_home === 0) value="0">Không</option>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label>Status</label>
+                    <label>Trạng Thái</label>
                     <select name="status" class="form-control" id="">
-                        <option @selected($category->status === 1) value="1">Active</option>
-                        <option @selected($category->status === 0) value="0">Inactive</option>
+                        <option @selected($category->status === 1) value="1">Hoạt Động</option>
+                        <option @selected($category->status === 0) value="0">Không Hoạt Động</option>
                     </select>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-primary">Cập Nhật</button>
             </form>
         </div>
     </div>

@@ -3,12 +3,12 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Settings</h1>
+            <h1>Cài Đặt</h1>
         </div>
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>All Settings</h4>
+                <h4>Tất Cả Cài Đặt</h4>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -16,27 +16,27 @@
                         <ul class="nav nav-pills flex-column" id="myTab4" role="tablist">
                             <li class="nav-item">
                                 <a class="nav-link active" id="home-tab4" data-toggle="tab" href="#general-setting"
-                                    role="tab" aria-controls="home" aria-selected="true">General Settings</a>
+                                    role="tab" aria-controls="home" aria-selected="true">Cài Đặt Chung</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="home-tab4" data-toggle="tab" href="#logo-setting" role="tab"
-                                    aria-controls="home" aria-selected="true">Logo Settings</a>
+                                    aria-controls="home" aria-selected="true">Cài Đặt Logo</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="home-tab4" data-toggle="tab" href="#appearance-setting" role="tab"
-                                    aria-controls="home" aria-selected="true">Appearance Settings</a>
+                                    aria-controls="home" aria-selected="true">Cài Đặt Giao Diện</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="profile-tab4" data-toggle="tab" href="#pusher-setting"
-                                    role="tab" aria-controls="profile" aria-selected="false">Pusher Settings</a>
+                                    role="tab" aria-controls="profile" aria-selected="false">Cài Đặt Pusher</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="" data-toggle="tab" href="#mail-setting" role="tab"
-                                    aria-controls="contact" aria-selected="false">Mail Settings</a>
+                                    aria-controls="contact" aria-selected="false">Cài Đặt Mail</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" id="" data-toggle="tab" href="#seo-setting" role="tab"
-                                    aria-controls="contact" aria-selected="false">Seo Settings</a>
+                                    aria-controls="contact" aria-selected="false">Cài Đặt SEO</a>
                             </li>
                         </ul>
                     </div>

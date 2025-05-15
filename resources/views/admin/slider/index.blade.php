@@ -8,10 +8,10 @@
 
         <div class="card card-primary">
             <div class="card-header">
-                <h4>All Sliders</h4>
+                <h4>Tất Cả Slider</h4>
                 <div class="card-header-action">
                     <a href="{{ route('admin.slider.create') }}" class="btn btn-primary">
-                        Create new
+                        Tạo Mới
                     </a>
                 </div>
             </div>

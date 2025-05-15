@@ -23,7 +23,7 @@ class OrderService {
             $order->payment_approve_date = NULL;
             $order->transaction_id = NULL;
             $order->coupon_info = json_encode(session()->get('coupon'));
-            $order->currency_name = NULL;
+            $order->currency_name = "₫";
             $order->order_status = 'pending';
             $order->address_id = session()->get('address_id');
             $order->save();

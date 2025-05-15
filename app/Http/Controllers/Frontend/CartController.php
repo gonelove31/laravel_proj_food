@@ -67,7 +67,7 @@ class CartController extends Controller
                 'options' => $options
             ]);
 
-            return response(['status' => 'success', 'message' => 'Product added into cart!'], 200);
+            return response(['status' => 'success', 'message' => 'Sản Phẩm Đã Được Thêm Vào Giỏ Hàng!'], 200);
         } catch (\Exception $e) {
             logger($e);
             return response(['status' => 'error', 'message' => 'Something went wrong!'], 500);

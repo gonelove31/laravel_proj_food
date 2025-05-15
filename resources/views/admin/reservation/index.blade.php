@@ -3,11 +3,11 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Reservation</h1>
+            <h1>Đặt Bàn</h1>
         </div>
         <div class="card card-primary">
             <div class="card-header">
-                <h4>All Reservation</h4>
+                <h4>Tất Cả Đơn Đặt Bàn</h4>
             </div>
             <div class="card-body">
                 {{ $dataTable->table() }}
