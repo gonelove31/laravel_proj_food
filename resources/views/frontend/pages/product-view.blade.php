@@ -204,12 +204,12 @@
                                         @auth
                                         <div class="col-lg-4">
                                             <div class="fp__post_review">
-                                                <h4>write a Review</h4>
+                                                <h4>Viết 1 đánh giá</h4>
                                                 <form action="{{ route('product-review.store') }}" method="POST">
                                                     @csrf
                                                     <div class="row">
                                                         <div class="col-xl-12 mt-3">
-                                                            <label> Choose a rating</label>
+                                                            <label> Chọn điểm đánh giá</label>
                                                             <select name="rating" id="rating_input" class="form-control ">
                                                                 <option value="5">5</option>
                                                                 <option value="4">4</option>
@@ -221,12 +221,12 @@
                                                         </div>
 
                                                         <div class="col-xl-12">
-                                                            <label for="">Review</label>
+                                                            <label for="">Đánh giá</label>
                                                             <textarea style="margin-top: 2px" name="review" rows="3" placeholder="Write your review"></textarea>
                                                         </div>
                                                         <div class="col-12">
-                                                            <button class="common_btn" type="submit">submit
-                                                                review</button>
+                                                            <button class="common_btn" type="submit">gửi
+                                                                Đánh giá</button>
                                                         </div>
                                                     </div>
                                                 </form>
@@ -234,8 +234,8 @@
                                         </div>
                                         @else
                                         <div class="col-lg-4">
-                                            <h4>write a Review</h4>
-                                            <div class="alert alert-warning mt-4">Please login first to add review.</div>
+                                            <h4>Viết 1 đánh giá</h4>
+                                            <div class="alert alert-warning mt-4">vui lòng đăng nhập để viết đánh giá.</div>
                                         </div>
                                         @endauth
                                     </div>
