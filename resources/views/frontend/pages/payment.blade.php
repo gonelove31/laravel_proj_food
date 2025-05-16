@@ -27,7 +27,7 @@
     ==============================-->
     <section class="fp__payment_page mt_100 xs_mt_70 mb_100 xs_mb_70">
         <div class="container">
-            <h2>Choose Your Payment Gateway</h2>
+            <h2>Chọn phương thức thanh toán</h2>
             <div class="row">
                 <div class="col-lg-8">
                     <div class="fp__payment_area">

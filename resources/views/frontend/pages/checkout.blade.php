@@ -31,8 +31,8 @@
                 <div class="col-lg-8 col-lg-7 wow fadeInUp" data-wow-duration="1s">
                     <div class="fp__checkout_form">
                         <div class="fp__check_form">
-                            <h5>select address <a href="#" data-bs-toggle="modal" data-bs-target="#address_modal"><i
-                                        class="far fa-plus"></i> add address</a></h5>
+                            <h5>Chọn Địa Chỉ <a href="#" data-bs-toggle="modal" data-bs-target="#address_modal"><i
+                                        class="far fa-plus"></i> Thêm Địa Chỉ</a></h5>
 
                             <div class="fp__address_modal">
                                 <div class="modal fade" id="address_modal" data-bs-backdrop="static"
@@ -171,7 +171,7 @@
                         @endif
                         <p class="total"><span>total:</span> <span id="grand_total">{{ currencyPosition(grandCartTotal()) }}</span></p>
 
-                        <a class="common_btn" id="procced_pmt_button" href=" #">Proceed to Payment</a>
+                        <a class="common_btn" id="procced_pmt_button" href=" #">Tiến hành thanh toán</a>
                     </div>
                 </div>
             </div>
