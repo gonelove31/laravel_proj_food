@@ -16,3 +16,4 @@ yarn-error.log
 /.vagrant
 .DS_Store
 Thumbs.db
+/database/migrations/*.php

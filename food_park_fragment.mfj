@@ -1,0 +1,1670 @@
+{
+  "_type": "UMLModel",
+  "_id": "JwvqVV2cVgA=",
+  "name": "FoodPark",
+  "ownedElements": [
+    {
+      "_id": "LN4ct6eeyOA=",
+      "_type": "UMLClass",
+      "name": "blogs",
+      "attributes": [
+        {
+          "_id": "rq3FHPZJxUY=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "6TLBpLoX3EY=",
+          "_type": "UMLAttribute",
+          "name": "user_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "+8wUpRSVjDw=",
+          "_type": "UMLAttribute",
+          "name": "category_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "3kiNsh6u/ao=",
+          "_type": "UMLAttribute",
+          "name": "image",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "WWl6AeU4SAg=",
+          "_type": "UMLAttribute",
+          "name": "title",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "LgVTa15VXFo=",
+          "_type": "UMLAttribute",
+          "name": "slug",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "iKZ4Q8pYzfE=",
+          "_type": "UMLAttribute",
+          "name": "description",
+          "type": "ntext"
+        },
+        {
+          "_id": "tIHCTKDEMpQ=",
+          "_type": "UMLAttribute",
+          "name": "seo_title",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "mOP3EUW3VmI=",
+          "_type": "UMLAttribute",
+          "name": "seo_description",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "NJYVTAl3FLc=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "znttGEzqCVM=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "ls3UgyR/QfY=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "FfcHO8Fq3NM=",
+          "_type": "UMLAttribute",
+          "name": "PK_blogs",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "Ts9OcKNSVZQ=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "wOxdXtsoPv4=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "0xtEMP4vo6Q=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "an9Qq0ndp+0=",
+      "_type": "UMLClass",
+      "name": "blog_categories",
+      "attributes": [
+        {
+          "_id": "OhVHM0IT37k=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "bL0qpbZs4Iw=",
+          "_type": "UMLAttribute",
+          "name": "name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "jlSYA3PG8z4=",
+          "_type": "UMLAttribute",
+          "name": "slug",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "fg+FTuTiJco=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "7upWOWAzgic=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "nyWKHbOVTN0=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "e9q3PyV+Dwg=",
+          "_type": "UMLAttribute",
+          "name": "PK_blog_categories",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "i0IEJ9hUXhI=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "GYa3WwkXzwo=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "1fOYFoiUpdQ=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "zjB9r1/IePA=",
+      "_type": "UMLClass",
+      "name": "categories",
+      "attributes": [
+        {
+          "_id": "doLGLsGUQBE=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "i6RT4qhn9HM=",
+          "_type": "UMLAttribute",
+          "name": "name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "ThabDPcmFDc=",
+          "_type": "UMLAttribute",
+          "name": "slug",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "LHes8Rl/puk=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "ylxPfxwkvYk=",
+          "_type": "UMLAttribute",
+          "name": "show_at_home",
+          "type": "bit"
+        },
+        {
+          "_id": "9XmZiXqzC+I=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "eyImei+keCY=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "mA74FLqD1fs=",
+          "_type": "UMLAttribute",
+          "name": "PK_categories",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "GtNFB7ulSjo=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "PY97GQPEz1Q=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "+JnUQ/c9wqU=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "/AJoFJBxaiM=",
+      "_type": "UMLClass",
+      "name": "coupons",
+      "attributes": [
+        {
+          "_id": "CTCY+x7updE=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "QHUdZJvb4SQ=",
+          "_type": "UMLAttribute",
+          "name": "name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "tQT2nSuxq6E=",
+          "_type": "UMLAttribute",
+          "name": "code",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "PZdy3ijtBbc=",
+          "_type": "UMLAttribute",
+          "name": "quantity",
+          "type": "int"
+        },
+        {
+          "_id": "Rxaj7PtyvmE=",
+          "_type": "UMLAttribute",
+          "name": "min_purchase_amount",
+          "type": "int"
+        },
+        {
+          "_id": "K2XHQoE7JYo=",
+          "_type": "UMLAttribute",
+          "name": "expire_date",
+          "type": "date"
+        },
+        {
+          "_id": "SUPVMHCe2l4=",
+          "_type": "UMLAttribute",
+          "name": "discount_type",
+          "type": "nvarchar(10)"
+        },
+        {
+          "_id": "8lTfSeXDThM=",
+          "_type": "UMLAttribute",
+          "name": "discount_type",
+          "type": "IN"
+        },
+        {
+          "_id": "6agZg8othAM=",
+          "_type": "UMLAttribute",
+          "name": "discount",
+          "type": "float"
+        },
+        {
+          "_id": "Udne+zZ3EBQ=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "R632JGVu6hw=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "TrcAr4XmRa0=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "RH5cO2AQed4=",
+          "_type": "UMLAttribute",
+          "name": "PK_coupons",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "YEwkI6h0zHU=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "586nDhNvugs=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "qfFqg3jBrTM=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "K7x9k3cXTvg=",
+      "_type": "UMLClass",
+      "name": "daily_offers",
+      "attributes": [
+        {
+          "_id": "1Nkp+Jmfav0=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "fTQj2QAQHHc=",
+          "_type": "UMLAttribute",
+          "name": "product_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "OjbYAmd6UTs=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "o1wcfPON4KQ=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "7xUmRyDbMV0=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "IKCiMIrv6IY=",
+          "_type": "UMLAttribute",
+          "name": "PK_daily_offers",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "LLg/gONpeis=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "nMOpBZxYsdw=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "NPBP6DBSv7c=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "5G4qcZDYUpQ=",
+      "_type": "UMLClass",
+      "name": "delivery_areas",
+      "attributes": [
+        {
+          "_id": "5uxnp8OhuxU=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "VW30u2tQCk0=",
+          "_type": "UMLAttribute",
+          "name": "area_name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "dpoHNRWc4QM=",
+          "_type": "UMLAttribute",
+          "name": "min_delivery_time",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "THMknhVnXPM=",
+          "_type": "UMLAttribute",
+          "name": "max_delivery_time",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "SANDDDzBX0A=",
+          "_type": "UMLAttribute",
+          "name": "delivery_fee",
+          "type": "float"
+        },
+        {
+          "_id": "vedyjjqrSpU=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "//EbdsqFZDI=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "OwQVFOBtLeE=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "P6Op80YPy/g=",
+          "_type": "UMLAttribute",
+          "name": "PK_delivery_areas",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "xyB1UZVlx0I=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "0zQHroqRQVU=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "6Z5ZKx4Rw2s=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "nV//YVqT7Lw=",
+      "_type": "UMLClass",
+      "name": "orders",
+      "attributes": [
+        {
+          "_id": "SGJdb3FGUGU=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "JeYB+c3bFv8=",
+          "_type": "UMLAttribute",
+          "name": "invoice_id",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "xuh8zmnbVdk=",
+          "_type": "UMLAttribute",
+          "name": "user_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "rpXgU3HHchE=",
+          "_type": "UMLAttribute",
+          "name": "address",
+          "type": "ntext"
+        },
+        {
+          "_id": "uPwSVluSlK0=",
+          "_type": "UMLAttribute",
+          "name": "discount",
+          "type": "float"
+        },
+        {
+          "_id": "vyLKaP00or8=",
+          "_type": "UMLAttribute",
+          "name": "delivery_charge",
+          "type": "float"
+        },
+        {
+          "_id": "85as1ZZXfvg=",
+          "_type": "UMLAttribute",
+          "name": "subtotal",
+          "type": "float"
+        },
+        {
+          "_id": "t32RYqkqK+k=",
+          "_type": "UMLAttribute",
+          "name": "grand_total",
+          "type": "float"
+        },
+        {
+          "_id": "efrbyRCbNig=",
+          "_type": "UMLAttribute",
+          "name": "product_qty",
+          "type": "int"
+        },
+        {
+          "_id": "KuXaJKEdhJk=",
+          "_type": "UMLAttribute",
+          "name": "payment_method",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "lHfMtQFXae8=",
+          "_type": "UMLAttribute",
+          "name": "payment_status",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "LCx7UVu79lE=",
+          "_type": "UMLAttribute",
+          "name": "payment_approve_date",
+          "type": "datetime"
+        },
+        {
+          "_id": "Mx41AaXarNQ=",
+          "_type": "UMLAttribute",
+          "name": "transaction_id",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "CZESLTx4fLQ=",
+          "_type": "UMLAttribute",
+          "name": "coupon_info",
+          "type": "nvarchar(max)"
+        },
+        {
+          "_id": "eHz/9LSWPDA=",
+          "_type": "UMLAttribute",
+          "name": "currency_name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "S/rmOOyJwQI=",
+          "_type": "UMLAttribute",
+          "name": "order_status",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "IJzT5kxs8Bg=",
+          "_type": "UMLAttribute",
+          "name": "cancel_reason",
+          "type": "ntext"
+        },
+        {
+          "_id": "z5Fno+c2JRg=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "ppTl/7CixIE=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "hy0bv5pxojE=",
+          "_type": "UMLAttribute",
+          "name": "address_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "Kb0aIpqqxcg=",
+          "_type": "UMLAttribute",
+          "name": "PK_orders",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "0WQ/gi377b8=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "2qQSrcFKz0E=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "xfaQz4S61JQ=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "T42PN9Oe9k0=",
+      "_type": "UMLClass",
+      "name": "order_items",
+      "attributes": [
+        {
+          "_id": "/IjppFmHsd8=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "cIqEJVYddOU=",
+          "_type": "UMLAttribute",
+          "name": "order_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "cMBzjf7V2hE=",
+          "_type": "UMLAttribute",
+          "name": "product_name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "t8xIKOkpGWs=",
+          "_type": "UMLAttribute",
+          "name": "product_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "MMJAfFrI3bo=",
+          "_type": "UMLAttribute",
+          "name": "unit_price",
+          "type": "float"
+        },
+        {
+          "_id": "gIGDJ0GPRGE=",
+          "_type": "UMLAttribute",
+          "name": "qty",
+          "type": "int"
+        },
+        {
+          "_id": "6g3Kauuh0Dg=",
+          "_type": "UMLAttribute",
+          "name": "product_size",
+          "type": "nvarchar(max)"
+        },
+        {
+          "_id": "sDAB5G3Nqc4=",
+          "_type": "UMLAttribute",
+          "name": "product_option",
+          "type": "nvarchar(max)"
+        },
+        {
+          "_id": "hntAvf1L9jA=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "GhB1VPX4j9s=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "B2eL55uodz8=",
+          "_type": "UMLAttribute",
+          "name": "PK_order_items",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "sYvTYGPqZkg=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "q/Oczm1krZA=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "1lhAkq2viU4=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "k9PRVjaUoBg=",
+      "_type": "UMLClass",
+      "name": "products",
+      "attributes": [
+        {
+          "_id": "Pm/TxFk3Bps=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "EZmaRs9IVss=",
+          "_type": "UMLAttribute",
+          "name": "name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "n5+lZRUMrY8=",
+          "_type": "UMLAttribute",
+          "name": "slug",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "0rGW3Zl4Gqg=",
+          "_type": "UMLAttribute",
+          "name": "thumb_image",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "S5Ds/KTtroY=",
+          "_type": "UMLAttribute",
+          "name": "category_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "eoFy6i7RRAM=",
+          "_type": "UMLAttribute",
+          "name": "short_description",
+          "type": "ntext"
+        },
+        {
+          "_id": "XlJ06zxQHAA=",
+          "_type": "UMLAttribute",
+          "name": "long_description",
+          "type": "ntext"
+        },
+        {
+          "_id": "yCKYMfrReLw=",
+          "_type": "UMLAttribute",
+          "name": "price",
+          "type": "float"
+        },
+        {
+          "_id": "2TJGJJx3lBQ=",
+          "_type": "UMLAttribute",
+          "name": "offer_price",
+          "type": "float"
+        },
+        {
+          "_id": "Un4UExjWVqE=",
+          "_type": "UMLAttribute",
+          "name": "quantity",
+          "type": "int"
+        },
+        {
+          "_id": "OTU//h+jJJU=",
+          "_type": "UMLAttribute",
+          "name": "sku",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "xpC/XUlrXWQ=",
+          "_type": "UMLAttribute",
+          "name": "seo_title",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "INueEgCF39o=",
+          "_type": "UMLAttribute",
+          "name": "seo_description",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "Ht+clXVPfTE=",
+          "_type": "UMLAttribute",
+          "name": "show_at_home",
+          "type": "bit"
+        },
+        {
+          "_id": "a72aMLZHcU4=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "UjbAJiNjhO4=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "YLxwcr3k5nM=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "s5BzcZcf60E=",
+          "_type": "UMLAttribute",
+          "name": "PK_products",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "CVqPJY6fT6E=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "oKtWww4XXaM=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "T7q6RSs7BUY=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "Ygc9r41rKDw=",
+      "_type": "UMLClass",
+      "name": "product_galleries",
+      "attributes": [
+        {
+          "_id": "vTvJudgCQs8=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "XQs3TiZz89g=",
+          "_type": "UMLAttribute",
+          "name": "product_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "Hg+0oLK1Z9g=",
+          "_type": "UMLAttribute",
+          "name": "image",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "Uz1cunKpfHM=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "i8XBeaHnpgM=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "wLUJE6tylzQ=",
+          "_type": "UMLAttribute",
+          "name": "PK_product_galleries",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "Lk/DNJMW5UI=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "00ZxbRZBslA=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "Q/FHjlDF0/4=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "1pDfJt0DinY=",
+      "_type": "UMLClass",
+      "name": "product_options",
+      "attributes": [
+        {
+          "_id": "44er8IENYOI=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "EyWo1nnNj4o=",
+          "_type": "UMLAttribute",
+          "name": "product_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "mH1nP0ABlDQ=",
+          "_type": "UMLAttribute",
+          "name": "name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "AzSMxshpqIw=",
+          "_type": "UMLAttribute",
+          "name": "price",
+          "type": "float"
+        },
+        {
+          "_id": "QpLIVf2mA0U=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "Dm9wsJQy4cQ=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "j/arDu+lYWY=",
+          "_type": "UMLAttribute",
+          "name": "PK_product_options",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "zX0oppFFu8U=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "NN6bHkbaQMA=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "wm7HZU/bWM4=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "aoFIpEvWU1Y=",
+      "_type": "UMLClass",
+      "name": "product_ratings",
+      "attributes": [
+        {
+          "_id": "bbsaale749w=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "wuxaC7l7K8U=",
+          "_type": "UMLAttribute",
+          "name": "user_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "SOa9IhnGn5E=",
+          "_type": "UMLAttribute",
+          "name": "product_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "LALkiykA+88=",
+          "_type": "UMLAttribute",
+          "name": "rating",
+          "type": "int"
+        },
+        {
+          "_id": "l6mIAvLd3K0=",
+          "_type": "UMLAttribute",
+          "name": "review",
+          "type": "ntext"
+        },
+        {
+          "_id": "5Itb14yC+DM=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "K3Fv2a9nzcU=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "+ygrTw+WUhk=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "Yw+rPySpQF8=",
+          "_type": "UMLAttribute",
+          "name": "PK_product_ratings",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "yL2vxODCBuU=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "vRhpAwJxHzw=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "/HpTnyw5gXU=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "WT8Hp7aHAEI=",
+      "_type": "UMLClass",
+      "name": "reservations",
+      "attributes": [
+        {
+          "_id": "0gziLVCLml0=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "ujNkZHly3zg=",
+          "_type": "UMLAttribute",
+          "name": "reservation_id",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "EqArY4ap0h0=",
+          "_type": "UMLAttribute",
+          "name": "user_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "ud2Tf02ItKY=",
+          "_type": "UMLAttribute",
+          "name": "name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "OtXcWzlJuWs=",
+          "_type": "UMLAttribute",
+          "name": "phone",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "+pCv+/FdUlc=",
+          "_type": "UMLAttribute",
+          "name": "date",
+          "type": "date"
+        },
+        {
+          "_id": "ZsGDKJWf/0A=",
+          "_type": "UMLAttribute",
+          "name": "time",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "3BjclZjCh+c=",
+          "_type": "UMLAttribute",
+          "name": "persons",
+          "type": "int"
+        },
+        {
+          "_id": "odBzktOipLY=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "0WXPWMJs6R8=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "/MHc58X3Y4w=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "R9f3Sv2LuoM=",
+          "_type": "UMLAttribute",
+          "name": "PK_reservations",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "74KL0zQ4jdk=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "yy5q0YHzsMo=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "u8bg2i3K8qA=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "R7IounycOFE=",
+      "_type": "UMLClass",
+      "name": "reservation_times",
+      "attributes": [
+        {
+          "_id": "QJBfPdmUwAM=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "I8aRMMjB+PA=",
+          "_type": "UMLAttribute",
+          "name": "start_time",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "Z4y3KCdPppM=",
+          "_type": "UMLAttribute",
+          "name": "end_time",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "xGWCXnK90j0=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "/GuG0VvVE0E=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "Jjkk72SEHhw=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "p40TSNI2oOs=",
+          "_type": "UMLAttribute",
+          "name": "PK_reservation_times",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "Hqy/wiH8uCo=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "d9hG+CbzMdw=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "pry/KVA0bUs=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "YsS7XoaiIho=",
+      "_type": "UMLClass",
+      "name": "settings",
+      "attributes": [
+        {
+          "_id": "RpxbsOG3Nv0=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "yYookuguIDk=",
+          "_type": "UMLAttribute",
+          "name": "key",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "03lFrXFov3Q=",
+          "_type": "UMLAttribute",
+          "name": "value",
+          "type": "ntext"
+        },
+        {
+          "_id": "mbwaZpvSCuA=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "GWjOv8XTYdo=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "cRFODHFTbfk=",
+          "_type": "UMLAttribute",
+          "name": "PK_settings",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "NGlU+BmITME=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "Thpz5i7pEnc=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "cxpNu1i4iRU=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "8xNYi5YO9IU=",
+      "_type": "UMLClass",
+      "name": "sliders",
+      "attributes": [
+        {
+          "_id": "Lglkf6WZky0=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "jhzy/WyqhMY=",
+          "_type": "UMLAttribute",
+          "name": "image",
+          "type": "ntext"
+        },
+        {
+          "_id": "mt54cNB8il8=",
+          "_type": "UMLAttribute",
+          "name": "offer",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "gwT06B+JwV0=",
+          "_type": "UMLAttribute",
+          "name": "title",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "u+R6ZZb0v1A=",
+          "_type": "UMLAttribute",
+          "name": "sub_title",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "ZoN9UT+9s0g=",
+          "_type": "UMLAttribute",
+          "name": "short_description",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "kHklk1o+HBE=",
+          "_type": "UMLAttribute",
+          "name": "button_link",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "Nt3oZpIKA3U=",
+          "_type": "UMLAttribute",
+          "name": "status",
+          "type": "bit"
+        },
+        {
+          "_id": "ksAS0Oh7RvI=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "RFEMOWcnT60=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "xh2xJUBvQbg=",
+          "_type": "UMLAttribute",
+          "name": "PK_sliders",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "2+mZ9nhSCiw=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "cWo6U0ELqYw=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "9oz0tBKYbB8=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "amoWHS4D6oE=",
+      "_type": "UMLClass",
+      "name": "users",
+      "attributes": [
+        {
+          "_id": "wK+M1EkoR5E=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "XUDiW7aRPxM=",
+          "_type": "UMLAttribute",
+          "name": "avatar",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "3CY0u9HWcmw=",
+          "_type": "UMLAttribute",
+          "name": "name",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "z2/1aogmw8A=",
+          "_type": "UMLAttribute",
+          "name": "email",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "R4bf8sK8eIM=",
+          "_type": "UMLAttribute",
+          "name": "role",
+          "type": "nvarchar(10)"
+        },
+        {
+          "_id": "iyRf9hDpHXU=",
+          "_type": "UMLAttribute",
+          "name": "role",
+          "type": "IN"
+        },
+        {
+          "_id": "JWs7jKG1m4E=",
+          "_type": "UMLAttribute",
+          "name": "email_verified_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "O65bOanM4JA=",
+          "_type": "UMLAttribute",
+          "name": "password",
+          "type": "nvarchar(255)"
+        },
+        {
+          "_id": "s2bcvQhqWcs=",
+          "_type": "UMLAttribute",
+          "name": "remember_token",
+          "type": "nvarchar(100)"
+        },
+        {
+          "_id": "fiSWF+QIV4k=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "ZCzzCxrPrcY=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "DILNKppm3B4=",
+          "_type": "UMLAttribute",
+          "name": "PK_users",
+          "type": "PRIMARY"
+        },
+        {
+          "_id": "ulnxIKmNuOA=",
+          "_type": "UMLAttribute",
+          "name": "UQ_users_email",
+          "type": "UNIQUE"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "+iLCFHKUHbE=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "1rl0Xs1fLmw=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "3qJPys175So=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "ZYmtZQLGgow=",
+      "_type": "UMLClass",
+      "name": "wishlists",
+      "attributes": [
+        {
+          "_id": "hCVfC9ATOok=",
+          "_type": "UMLAttribute",
+          "name": "id",
+          "type": "bigint"
+        },
+        {
+          "_id": "PiSHXRlG3XA=",
+          "_type": "UMLAttribute",
+          "name": "user_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "/pifD1PGG/Q=",
+          "_type": "UMLAttribute",
+          "name": "product_id",
+          "type": "bigint"
+        },
+        {
+          "_id": "BjGwZ/4W0U8=",
+          "_type": "UMLAttribute",
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "LCpKkKpu2Pg=",
+          "_type": "UMLAttribute",
+          "name": "updated_at",
+          "type": "datetime"
+        },
+        {
+          "_id": "mMhqUgKgcUM=",
+          "_type": "UMLAttribute",
+          "name": "PK_wishlists",
+          "type": "PRIMARY"
+        }
+      ],
+      "operations": [
+        {
+          "_id": "2c10o6c9vuw=",
+          "_type": "UMLOperation",
+          "name": "them"
+        },
+        {
+          "_id": "vIIDHUHHDnk=",
+          "_type": "UMLOperation",
+          "name": "sua"
+        },
+        {
+          "_id": "6CFoPVIF+Vo=",
+          "_type": "UMLOperation",
+          "name": "xoa"
+        }
+      ]
+    },
+    {
+      "_id": "wo8M5uj9gbE=",
+      "_type": "UMLClassDiagram",
+      "name": "FoodPark Diagram",
+      "ownedViews": [
+        {
+          "_id": "lvqQtZHnKk0=",
+          "_type": "UMLClassView",
+          "model": "LN4ct6eeyOA=",
+          "left": 100,
+          "top": 100
+        },
+        {
+          "_id": "q0YVigpkYrM=",
+          "_type": "UMLClassView",
+          "model": "an9Qq0ndp+0=",
+          "left": 400,
+          "top": 100
+        },
+        {
+          "_id": "QdvG2pEQXeg=",
+          "_type": "UMLClassView",
+          "model": "zjB9r1/IePA=",
+          "left": 700,
+          "top": 100
+        },
+        {
+          "_id": "B67kqR/NGpk=",
+          "_type": "UMLClassView",
+          "model": "/AJoFJBxaiM=",
+          "left": 1000,
+          "top": 100
+        },
+        {
+          "_id": "T3moX4DGtbg=",
+          "_type": "UMLClassView",
+          "model": "K7x9k3cXTvg=",
+          "left": 1300,
+          "top": 100
+        },
+        {
+          "_id": "8mZWApfhFpo=",
+          "_type": "UMLClassView",
+          "model": "5G4qcZDYUpQ=",
+          "left": 100,
+          "top": 300
+        },
+        {
+          "_id": "Y3U4tQoY+hE=",
+          "_type": "UMLClassView",
+          "model": "nV//YVqT7Lw=",
+          "left": 400,
+          "top": 300
+        },
+        {
+          "_id": "qt0GeE7zkko=",
+          "_type": "UMLClassView",
+          "model": "T42PN9Oe9k0=",
+          "left": 700,
+          "top": 300
+        },
+        {
+          "_id": "rQiJyv4NQDk=",
+          "_type": "UMLClassView",
+          "model": "k9PRVjaUoBg=",
+          "left": 1000,
+          "top": 300
+        },
+        {
+          "_id": "O/KCEX8rXj8=",
+          "_type": "UMLClassView",
+          "model": "Ygc9r41rKDw=",
+          "left": 1300,
+          "top": 300
+        },
+        {
+          "_id": "HrXvVERRqFI=",
+          "_type": "UMLClassView",
+          "model": "1pDfJt0DinY=",
+          "left": 100,
+          "top": 500
+        },
+        {
+          "_id": "jW9aOQYAM34=",
+          "_type": "UMLClassView",
+          "model": "aoFIpEvWU1Y=",
+          "left": 400,
+          "top": 500
+        },
+        {
+          "_id": "X35w5DOG3FQ=",
+          "_type": "UMLClassView",
+          "model": "WT8Hp7aHAEI=",
+          "left": 700,
+          "top": 500
+        },
+        {
+          "_id": "TFokC4SMen8=",
+          "_type": "UMLClassView",
+          "model": "R7IounycOFE=",
+          "left": 1000,
+          "top": 500
+        },
+        {
+          "_id": "1odJy54teQA=",
+          "_type": "UMLClassView",
+          "model": "YsS7XoaiIho=",
+          "left": 1300,
+          "top": 500
+        },
+        {
+          "_id": "omYGGg4Sj34=",
+          "_type": "UMLClassView",
+          "model": "8xNYi5YO9IU=",
+          "left": 100,
+          "top": 700
+        },
+        {
+          "_id": "mTrRV6gHrD4=",
+          "_type": "UMLClassView",
+          "model": "amoWHS4D6oE=",
+          "left": 400,
+          "top": 700
+        },
+        {
+          "_id": "ydo8yUcjmuA=",
+          "_type": "UMLClassView",
+          "model": "ZYmtZQLGgow=",
+          "left": 700,
+          "top": 700
+        }
+      ]
+    }
+  ]
+}

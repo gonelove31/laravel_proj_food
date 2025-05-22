@@ -165,10 +165,10 @@
                 </ul>
             </li>
 
-            @if (auth()->user()->id === 1)
+            <!-- @if (auth()->user()->id === 1)
                 <li class="{{ setSidebarActive(['admin.chat.index']) }}"><a class="nav-link" href="{{ route('admin.chat.index') }}"><i class="fas fa-comment-dots"></i>
                         <span>Tin nhắn</span></a></li>
-            @endif
+            @endif -->
 
             <li class="dropdown {{ setSidebarActive([
                 'admin.blog-category.*',
