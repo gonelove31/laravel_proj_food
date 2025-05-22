@@ -17,3 +17,4 @@ yarn-error.log
 .DS_Store
 Thumbs.db
 /database/migrations/*.php
+/database/migrations/2019_01_05_293551_add-role-id-to-menu-items-table.php
