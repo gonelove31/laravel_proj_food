@@ -31,7 +31,7 @@
                 <div class="col-lg-8 col-lg-7 wow fadeInUp" data-wow-duration="1s">
                     <div class="fp__checkout_form">
                         <div class="fp__check_form">
-                            <h5>Chọn Địa Chỉ <a href="#" data-bs-toggle="modal" data-bs-target="#address_modal"><i
+                            <h5>Chọn Địa Chỉ giao hàng <a href="#" data-bs-toggle="modal" data-bs-target="#address_modal"><i
                                         class="far fa-plus"></i> Thêm Địa Chỉ</a></h5>
 
                             <div class="fp__address_modal">
@@ -162,14 +162,13 @@
                     <div id="sticky_sidebar" class="fp__cart_list_footer_button">
                         <h6>total cart</h6>
                         <p>subtotal: <span>{{ currencyPosition(cartTotal()) }}</span></p>
-                        <p>delivery: <span id="delivery_fee">0₫</span></p>
+                        <p>delivery: <span id="delivery_fee">{{ currencyPosition(session()->get('delivery_fee', 0)) }}</span></p>
                         @if (session()->has('coupon'))
                         <p>discount: <span>{{ currencyPosition(session()->get('coupon')['discount']) }}</span></p>
                         @else
                         <p>discount: <span>{{ currencyPosition(0) }}</span></p>
-
                         @endif
-                        <p class="total"><span>total:</span> <span id="grand_total">{{ currencyPosition(grandCartTotal()) }}</span></p>
+                        <p class="total"><span>total:</span> <span id="grand_total">{{ currencyPosition(grandCartTotal(session()->get('delivery_fee', 0))) }}</span></p>
 
                         <a class="common_btn" id="procced_pmt_button" href=" #">Tiến hành thanh toán</a>
                     </div>
@@ -195,6 +194,8 @@
                 let deliveryFee = $('#delivery_fee');
                 let grandTotal = $('#grand_total');
 
+                console.log('Selected address ID:', addressId);
+
                 $.ajax({
                     method: 'GET',
                     url: '{{ route("checkout.delivery-cal", ":id") }}'.replace(":id", addressId),
@@ -202,15 +203,27 @@
                         showLoader()
                     },
                     success: function(response) {
-                        deliveryFee.text("{{ currencyPosition(':amount') }}"
-                            .replace(":amount", response.delivery_fee.toFixed(2)));
+                        console.log('Server response:', response);
+                        
+                        let deliveryFeeValue = parseInt(response.delivery_fee) || 0;
+                        let grandTotalValue = parseInt(response.grand_total) || 0;
 
-                        grandTotal.text("{{ currencyPosition(':amount') }}"
-                        .replace(":amount", response.grand_total.toFixed(2)));
+                        console.log('Parsed values:', {
+                            deliveryFee: deliveryFeeValue,
+                            grandTotal: grandTotalValue
+                        });
+
+                        // Update delivery fee text using the helper function directly
+                        deliveryFee.text('{{ config('settings.site_currency_icon_position') === 'left' ? config('settings.site_currency_icon') : '' }}' + deliveryFeeValue + '{{ config('settings.site_currency_icon_position') === 'right' ? config('settings.site_currency_icon') : '' }}');
+
+                        // Update grand total text using the helper function directly
+                        grandTotal.text('{{ config('settings.site_currency_icon_position') === 'left' ? config('settings.site_currency_icon') : '' }}' + grandTotalValue + '{{ config('settings.site_currency_icon_position') === 'right' ? config('settings.site_currency_icon') : '' }}');
+
                     },
                     error: function(xhr, status, error){
+                        console.error('Error:', xhr.responseJSON);
                         let errorMessage = xhr.responseJSON.message;
-                        toastr.success(errorMessage);
+                        toastr.error(errorMessage);
                     },
                     complete: function() {
                         hideLoader()

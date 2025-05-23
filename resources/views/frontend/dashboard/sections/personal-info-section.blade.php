@@ -1,7 +1,7 @@
 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
 aria-labelledby="v-pills-home-tab">
 <div class="fp_dashboard_body">
-    <h3>Chào mừng đến với trang cá nhân của bạn</h3>
+    <!-- <h3>Chào mừng đến với trang cá nhân của bạn</h3> -->
 
     <div class="fp__dsahboard_overview">
         <div class="row">
