@@ -355,12 +355,12 @@ class FrontendController extends Controller
         }
 
         if($coupon->discount_type === 'percent') {
-            $discount = number_format($subtotal * ($coupon->discount / 100), 2);
+            $discount = round($subtotal * ($coupon->discount / 100));
         }elseif ($coupon->discount_type === 'amount'){
-            $discount = number_format($coupon->discount, 2);
+            $discount = round($coupon->discount);
         }
 
-        $finalTotal = $subtotal - $discount;
+        $finalTotal = round($subtotal - $discount);
 
         session()->put('coupon', ['code' => $code, 'discount' => $discount]);
 

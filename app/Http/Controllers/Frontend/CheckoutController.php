@@ -19,9 +19,26 @@ class CheckoutController extends Controller
     function CalculateDeliveryCharge(string $id) {
         try {
             $address = Address::findOrFail($id);
-            $deliveryFee = $address->deliveryArea?->delivery_fee;
-            $grandTotal = grandCartTotal($deliveryFee);
-            return response(['delivery_fee' => $deliveryFee, 'grand_total' => $grandTotal]);
+            $cartTotal = cartTotal();
+            $deliveryFee = (float) ($address->deliveryArea?->delivery_fee ?? 0);
+            $grandTotal = (float) ($cartTotal + $deliveryFee);
+            
+            if(session()->has('coupon')) {
+                $discount = (float) session()->get('coupon')['discount'];
+                $grandTotal = $grandTotal - $discount;
+            }
+
+            logger('Debug values:', [
+                'cartTotal' => $cartTotal,
+                'deliveryFee' => $deliveryFee,
+                'discount' => session()->get('coupon')['discount'] ?? 0,
+                'grandTotal' => $grandTotal
+            ]);
+
+            return response([
+                'delivery_fee' => (int) $deliveryFee,
+                'grand_total' => (int) $grandTotal
+            ]);
         }catch(\Exception $e) {
             logger($e);
             return response(['message' => 'Something Went Wrong!'], 422);
