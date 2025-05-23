@@ -1,4 +1,4 @@
-<section class="fp__counter" style="background: url({{ @$counter->background }});">
+<!-- <section class="fp__counter" style="background: url({{ @$counter->background }});">
     <div class="fp__counter_overlay pt_100 xs_pt_70 pb_100 xs_pb_70">
         <div class="container">
             <div class="row">
@@ -43,6 +43,4 @@
     </div>
 </section>
 
-<!-- <h4>Thống kê</h4>
-<h2>FoodPark trong số liệu</h2>
-<p>Những con số ấn tượng về sự phát triển của chúng tôi</p> -->
+

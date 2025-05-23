@@ -162,7 +162,7 @@
                     <div id="sticky_sidebar" class="fp__cart_list_footer_button">
                         <h6>total cart</h6>
                         <p>subtotal: <span>{{ currencyPosition(cartTotal()) }}</span></p>
-                        <p>delivery: <span id="delivery_fee">$00.00</span></p>
+                        <p>delivery: <span id="delivery_fee">0₫</span></p>
                         @if (session()->has('coupon'))
                         <p>discount: <span>{{ currencyPosition(session()->get('coupon')['discount']) }}</span></p>
                         @else
@@ -185,6 +185,9 @@
 @push('scripts')
     <script>
         $(document).ready(function() {
+            // Add CSS for nice-select dropdown
+            $('<style>.nice-select .list { max-height: 200px; overflow-y: auto; }</style>').appendTo('head');
+            
             $('.v_address').prop('checked', false);
 
             $('.v_address').on('click', function(){

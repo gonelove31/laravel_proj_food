@@ -45,7 +45,7 @@
 
                         <div class="col-md-12 col-lg-12 col-xl-12">
                             <div class="fp__check_single_form">
-                                <select id="select_js3" name="area">
+                                <select class="nice-select" name="area">
                                     <option value="">Chọn khu vực</option>
                                     @foreach ($deliveryAreas as $area)
                                         <option value="{{ $area->id }}">{{ $area->area_name }}</option>
@@ -189,6 +189,9 @@
 @push('scripts')
     <script>
         $(document).ready(function(){
+            // Add CSS for nice-select dropdown
+            $('<style>.nice-select .list { max-height: 200px; overflow-y: auto; }</style>').appendTo('head');
+            
             $('.show_edit_section').on('click', function(){
                 let className = $(this).data('class');
                 $('.fp_dashboard_edit_address').removeClass('d-block');

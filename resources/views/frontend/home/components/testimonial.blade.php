@@ -1,4 +1,4 @@
-<section class="fp__testimonial pt_95 xs_pt_66 mb_150 xs_mb_120">
+<!-- <section class="fp__testimonial pt_95 xs_pt_66 mb_150 xs_mb_120">
     <div class="container">
         <div class="row wow fadeInUp" data-wow-duration="1s">
             <div class="col-md-8 col-lg-7 col-xl-6 m-auto text-center">
@@ -40,4 +40,4 @@
             @endforeach
         </div>
     </div>
-</section>
+</section> -->

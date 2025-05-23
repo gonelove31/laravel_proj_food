@@ -75,12 +75,12 @@
                                 @php
                                 $unseenMessages = \App\Models\Chat::where(['sender_id' => 1, 'receiver_id' => auth()->user()->id, 'seen' => 0])->count();
                                 @endphp
-                                <button class="nav-link fp_chat_message" id="v-pills-message-tab" data-bs-toggle="pill"
+                                <!-- <button class="nav-link fp_chat_message" id="v-pills-message-tab" data-bs-toggle="pill"
                                 data-bs-target="#v-pills-message" type="button" role="tab"
                                 aria-controls="v-pills-message" aria-selected="false"><span><i
                                 class="far fa-comment-dots"></i></span> Tin nhắn
                                 <b class="sunseen-message-count">{{ $unseenMessages > 0 ? 1 : 0 }}</b>
-                                </button>
+                                </button> -->
 
                                 <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
                                     data-bs-target="#v-pills-settings" type="button" role="tab"
