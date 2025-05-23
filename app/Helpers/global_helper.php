@@ -26,6 +26,7 @@ if (!function_exists('generateUniqueSlug')) {
 if (!function_exists('currencyPosition')) {
     function currencyPosition($price): string
     {
+        $price = round((float) $price);
         if (config('settings.site_currency_icon_position') === 'left') {
             return config('settings.site_currency_icon') . $price;
         } else {
