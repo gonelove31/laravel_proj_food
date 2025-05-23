@@ -167,6 +167,7 @@
     <script>
         $(document).ready(function() {
             var cartTotal = parseInt("{{ cartTotal() }}");
+            var currencyIcon = "{{ config('settings.site_currency_icon') }}";
 
 
             $('.increment').on('click', function() {
@@ -174,22 +175,20 @@
                 let currentValue = parseInt(inputField.val());
                 let rowId = inputField.data("id");
 
-                inputField.val(currentValue + 1);
-
-                cartQtyUpdate(rowId, inputField.val(), function(response) {
+                cartQtyUpdate(rowId, currentValue + 1, function(response) {
                     if (response.status === 'success') {
                         inputField.val(response.qty);
 
                         let productTotal = response.product_total;
                         inputField.closest("tr")
                             .find(".produt_cart_total")
-                            .text("{{ currencyPosition(':productTotal') }}"
-                            .replace(":productTotal", productTotal));
+                            .text(currencyIcon + productTotal);
 
                         cartTotal = response.cart_total;
-                        $('#subtotal').text("{{ config('settings.site_currency_icon') }}" + cartTotal);
+                        $('#subtotal').text(currencyIcon + cartTotal);
 
-                        $("#final_total").text("{{ config('settings.site_currency_icon') }}" + response.grand_cart_total)
+                        let finalTotal = response.grand_cart_total;
+                        $("#final_total").text(currencyIcon + finalTotal);
 
                     } else if (response.status === 'error') {
                         inputField.val(response.qty);
@@ -203,29 +202,26 @@
                 let currentValue = parseInt(inputField.val());
                 let rowId = inputField.data("id");
 
-                inputField.val(currentValue - 1);
-
-                if (inputField.val() > 1) {
-
-                    cartQtyUpdate(rowId, inputField.val(), function(response) {
+                if (currentValue > 1) {
+                    cartQtyUpdate(rowId, currentValue - 1, function(response) {
                         if (response.status === 'success') {
                             inputField.val(response.qty);
 
                             let productTotal = response.product_total;
                             inputField.closest("tr")
                                 .find(".produt_cart_total")
-                                .text("{{ currencyPosition(':productTotal') }}"
-                                    .replace(":productTotal", productTotal));
+                                .text(currencyIcon + productTotal);
 
                             cartTotal = response.cart_total;
-                            $('#subtotal').text("{{ config('settings.site_currency_icon') }}" + cartTotal);
-                            $("#final_total").text("{{ config('settings.site_currency_icon') }}" + response.grand_cart_total)
+                            $('#subtotal').text(currencyIcon + cartTotal);
 
-                        } else if (response.error === 'error') {
+                            let finalTotal = response.grand_cart_total;
+                            $("#final_total").text(currencyIcon + finalTotal);
+
+                        } else if (response.status === 'error') {
                             inputField.val(response.qty);
                             toastr.error(response.message);
                         }
-
                     });
                 }
             });
@@ -275,8 +271,8 @@
                     success: function(response) {
                         updateSidebarCart();
                         cartTotal = response.cart_total;
-                        $('#subtotal').text("{{ config('settings.site_currency_icon') }}" + cartTotal);
-                        $("#final_total").text("{{ config('settings.site_currency_icon') }}" + response.grand_cart_total)
+                        $('#subtotal').text(currencyIcon + cartTotal);
+                        $("#final_total").text(currencyIcon + response.grand_cart_total)
 
                     },
                     error: function(xhr, status, error) {
@@ -313,7 +309,7 @@
                     success: function(response){
                         $("#coupon_code").val("");
                         $('#discount').text("{{ config('settings.site_currency_icon') }}"+response.discount);
-                        $('#final_total').text("{{ config('settings.site_currency_icon') }}"+response.finalTotal);
+                        $('#final_total').text(currencyIcon + response.finalTotal);
                         $couponCartHtml = `<div class="card mt-2">
                             <div class="m-3">
                                 <span><b class="v_coupon_code">Applied Couppon: ${response.coupon_code}</b></span>
@@ -350,7 +346,7 @@
                     },
                     success: function(response){
                         $('#discount').text("{{ config('settings.site_currency_icon') }}"+0);
-                        $("#final_total").text("{{ config('settings.site_currency_icon') }}" + response.grand_cart_total);
+                        $("#final_total").text(currencyIcon + response.grand_cart_total);
                         $('.coupon_card').html("");
 
                         toastr.success(response.message);
