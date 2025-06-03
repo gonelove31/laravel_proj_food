@@ -17,11 +17,11 @@
                         <li class="nav-item">
                           <a class="nav-link active" id="home-tab4" data-toggle="tab" href="#paypal-setting" role="tab" aria-controls="home" aria-selected="true">Paypal</a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                           <a class="nav-link" id="profile-tab4" data-toggle="tab" href="#stripe-setting" role="tab" aria-controls="profile" aria-selected="false">Stripe</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" id="contact-tab4" data-toggle="tab" href="#razorpay-setting" role="tab" aria-controls="contact" aria-selected="false">Razorpay</a>
+                          <a class="nav-link" id="contact-tab4" data-toggle="tab" href="#razorpay-setting" role="tab" aria-controls="contact" aria-selected="false">Razorpay</a> -->
                         </li>
                       </ul>
                     </div>

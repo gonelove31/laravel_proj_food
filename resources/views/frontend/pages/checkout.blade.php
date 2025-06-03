@@ -41,7 +41,7 @@
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h1 class="modal-title fs-5" id="address_modalLabel">add new address
+                                                <h1 class="modal-title fs-5" id="address_modalLabel">Thêm địa chỉ mới
                                                 </h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
@@ -55,7 +55,7 @@
                                                             <div class="col-md-12 col-lg-12 col-xl-12">
                                                                 <div class="fp__check_single_form">
                                                                     <select class="nice-select" name="area">
-                                                                        <option value="">Slelect Area</option>
+                                                                        <option value="">Chọn khu vực</option>
                                                                         @foreach ($deliveryAreas as $area)
                                                                             <option value="{{ $area->id }}">
                                                                                 {{ $area->area_name }}</option>
@@ -120,9 +120,8 @@
                                                             </div>
                                                             <div  style="display:flex;">
                                                                 <button style="width: 200px" type="button"
-                                                                    class="common_btn cancel_new_address mr-2">cancel</button>
-                                                                <button style="width: 200px" type="submit" class="common_btn">save
-                                                                    address</button>
+                                                                    class="common_btn cancel_new_address mr-2">Hủy</button>
+                                                                <button style="width: 200px" type="submit" class="common_btn">Lưu địa chỉ</button>
                                                             </div>
                                                         </div>
                                                     </form>
@@ -162,7 +161,7 @@
                     <div id="sticky_sidebar" class="fp__cart_list_footer_button">
                         <h6>total cart</h6>
                         <p>subtotal: <span>{{ currencyPosition(cartTotal()) }}</span></p>
-                        <p>delivery: <span id="delivery_fee">{{ currencyPosition(session()->get('delivery_fee', 0)) }}</span></p>
+                        <p>Ship: <span id="delivery_fee">{{ currencyPosition(session()->get('delivery_fee', 0)) }}</span></p>
                         @if (session()->has('coupon'))
                         <p>discount: <span>{{ currencyPosition(session()->get('coupon')['discount']) }}</span></p>
                         @else

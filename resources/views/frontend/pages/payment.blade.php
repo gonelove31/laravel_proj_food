@@ -68,7 +68,7 @@
                     <div class="fp__cart_list_footer_button">
                         <h6>total cart</h6>
                         <p>subtotal: <span>{{ currencyPosition($subtotal) }}</span></p>
-                        <p>delivery: <span>{{ currencyPosition($delivery) }}</span></p>
+                        <p>Ship: <span>{{ currencyPosition($delivery) }}</span></p>
                         <p>discount: <span>{{ currencyPosition($discount) }}</span></p>
                         <p class="total"><span>total:</span> <span>{{ currencyPosition($grandTotal) }}</span></p>
 

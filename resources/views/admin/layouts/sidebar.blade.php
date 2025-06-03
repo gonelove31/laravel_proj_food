@@ -244,8 +244,8 @@
 
         <li class="{{ setSidebarActive(['admin.setting.index']) }}"><a class="nav-link" href="{{ route('admin.setting.index') }}"><i class="fas fa-cogs"></i>
                 <span>Cài đặt</span></a></li>
-
+<!-- 
         <li class="{{ setSidebarActive(['admin.clear-database.index*']) }}"><a class="nav-link" href="{{ route('admin.clear-database.index') }}"><i class="fas fa-exclamation-triangle"></i>
-                <span>Xóa cơ sở dữ liệu</span></a></li>
+                <span>Xóa cơ sở dữ liệu</span></a></li> -->
     </aside>
 </div>
