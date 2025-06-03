@@ -26,18 +26,18 @@
                                 <a class="nav-link" id="home-tab4" data-toggle="tab" href="#appearance-setting" role="tab"
                                     aria-controls="home" aria-selected="true">Cài Đặt Giao Diện</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" id="profile-tab4" data-toggle="tab" href="#pusher-setting"
                                     role="tab" aria-controls="profile" aria-selected="false">Cài Đặt Pusher</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" id="" data-toggle="tab" href="#mail-setting" role="tab"
                                     aria-controls="contact" aria-selected="false">Cài Đặt Mail</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" id="" data-toggle="tab" href="#seo-setting" role="tab"
                                     aria-controls="contact" aria-selected="false">Cài Đặt SEO</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="col-12 col-sm-12 col-md-10">

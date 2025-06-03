@@ -10,7 +10,7 @@
             <a href="{{ route('admin.product.index') }}" class="btn btn-primary my-3">Go Back</a>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <!-- <div class="col-md-6">
                 <div class="card card-primary">
                     <div class="card-header">
                         <h4>Create Product Size</h4>
@@ -77,7 +77,7 @@
                         </table>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="col-md-6">
                 <div class="card card-primary">

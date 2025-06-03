@@ -63,12 +63,12 @@
                     <textarea name="long_description" class="form-control summernote" id="">{{ old('long_description') }}</textarea>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Mã SKU</label>
                     <input type="text" name="sku" class="form-control" value="{{ old('sku') }}">
-                </div>
+                </div> -->
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label>Tiêu Đề SEO</label>
                     <input type="text" name="seo_title" class="form-control" value="{{ old('seo_title') }}">
                 </div>
@@ -76,7 +76,7 @@
                 <div class="form-group">
                     <label>Mô Tả SEO</label>
                     <textarea name="seo_description" class="form-control" id="">{{ old('seo_description') }}</textarea>
-                </div>
+                </div> -->
 
                 <div class="form-group">
                     <label>Hiển Thị Trang Chủ</label>

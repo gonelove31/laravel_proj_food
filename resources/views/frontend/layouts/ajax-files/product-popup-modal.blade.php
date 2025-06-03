@@ -8,14 +8,14 @@
 </div>
 <div class="fp__cart_popup_text">
 <a href="{{ route('product.show', $product->slug) }}" class="title">{!! $product->name !!}</a>
-<p class="rating">
+<!-- <p class="rating">
     <i class="fas fa-star"></i>
     <i class="fas fa-star"></i>
     <i class="fas fa-star"></i>
     <i class="fas fa-star-half-alt"></i>
     <i class="far fa-star"></i>
     <span>(201)</span>
-</p>
+</p> -->
 <h4 class="price">
     @if ($product->offer_price > 0)
     <input type="hidden" name="base_price" value="{{ $product->offer_price }}">

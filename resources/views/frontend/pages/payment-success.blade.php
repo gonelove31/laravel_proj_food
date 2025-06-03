@@ -38,7 +38,7 @@
                         color: #fff;"></i>
                     </div>
 
-                    <h4>Order Placed Successfully!</h4>
+                    <h4>Đơn hàng đã đặt thành công!</h4>
                     <a class="common_btn mt-4" href="{{ route('dashboard') }}">Go to Dahsboard</a>
                 </div>
 

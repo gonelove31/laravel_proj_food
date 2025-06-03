@@ -50,7 +50,7 @@
                 @php
                     @$unseenMessages = \App\Models\Chat::where(['sender_id' => 1, 'receiver_id' => auth()->user()->id, 'seen' => 0])->count();
                 @endphp
-                <li>
+                <!-- <li>
                     <a class="message_icon"
                     href="{{ route('dashboard') }}"
                       >
@@ -59,7 +59,7 @@
                         <span class="sunseen-message-count">{{ $unseenMessages > 0 ? 1 : 0 }}</span>
 
                       </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="{{ route('login') }}"><i class="fas fa-user"></i></a>
                 </li>
