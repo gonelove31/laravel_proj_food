@@ -61,9 +61,9 @@
                                 <address>
                                     <strong>Order Status:</strong><br>
                                     @if($order->order_status === 'delivered')
-                                        <span class="badge badge-success">Delivered</span>';
+                                        <span class="badge badge-success">Đã Giao</span>';
                                     @elseif($order->order_status === 'declined')
-                                        <span class="badge badge-danger">Declined</span>';
+                                        <span class="badge badge-danger">Đã Hủy</span>';
                                     @else
                                         <span class="badge badge-warning">{{ $order->order_status }}</span>
                                     @endif
@@ -93,7 +93,7 @@
                                 <tr>
                                     <th data-width="40">#</th>
                                     <th>Item</th>
-                                    <th>Size & Optional</th>
+                                    <th>Optional</th>
                                     <th class="text-center">Price</th>
                                     <th class="text-center">Quantity</th>
                                     <th class="text-right">Totals</th>
@@ -159,10 +159,10 @@
                                         <div class="form-group">
                                             <label for="">Order Status</label>
                                             <select class="form-control" name="order_status" id="">
-                                                <option @selected($order->order_status === 'pending') value="pending">Pending</option>
-                                                <option @selected($order->order_status === 'in_process') value="in_process">In Process</option>
-                                                <option @selected($order->order_status === 'delivered') value="delivered">Delivered</option>
-                                                <option @selected($order->order_status === 'declined') value="declined">Declined</option>
+                                                <option @selected($order->order_status === 'pending') value="pending">Chờ Xử Lý</option>
+                                                <option @selected($order->order_status === 'in_process') value="in_process">Đang Xử Lý</option>
+                                                <option @selected($order->order_status === 'delivered') value="delivered">Đã Giao</option>
+                                                <option @selected($order->order_status === 'declined') value="declined">Đã Hủy</option>
 
                                             </select>
                                         </div>

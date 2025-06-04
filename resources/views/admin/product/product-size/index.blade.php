@@ -3,7 +3,7 @@
 @section('content')
     <section class="section">
         <div class="section-header">
-            <h1>Products Variants ({{ $product->name }})</h1>
+            <h1>Products Options ({{ $product->name }})</h1>
         </div>
 
         <div>

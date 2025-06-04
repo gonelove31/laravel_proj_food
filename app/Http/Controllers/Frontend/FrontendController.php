@@ -255,14 +255,10 @@ class FrontendController extends Controller
     }
 
     function products(Request $request) : View {
-
         $products = Product::where(['status' => 1])->orderBy('id', 'DESC');
 
         if($request->has('search') && $request->filled('search')) {
-            $products->where(function($query) use ($request) {
-                $query->where('name', 'like', '%'.$request->search.'%')
-                    ->orWhere('long_description', 'like', '%'.$request->search.'%');
-            });
+            $products->where('name', 'like', '%'.$request->search.'%');
         }
 
         if($request->has('category') && $request->filled('category')) {
@@ -272,7 +268,6 @@ class FrontendController extends Controller
         }
 
         $products = $products->withAvg('reviews', 'rating')->withCount('reviews')->paginate(12);
-
         $categories = Category::where('status', 1)->get();
 
         return view('frontend.pages.product', compact('products', 'categories'));
