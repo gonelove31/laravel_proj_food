@@ -75,7 +75,12 @@ class CartController extends Controller
     }
 
     function getCartProduct() {
-        return view('frontend.layouts.ajax-files.sidebar-cart-item')->render();
+        $html = view('frontend.layouts.ajax-files.sidebar-cart-item')->render();
+        return response()->json([
+            'html' => $html,
+            'cartTotal' => currencyPosition(cartTotal()),
+            'cartCount' => count(Cart::content())
+        ]);
     }
 
     function cartProductRemove($rowId) {

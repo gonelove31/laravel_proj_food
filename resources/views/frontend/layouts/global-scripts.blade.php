@@ -106,11 +106,9 @@ function updateSidebarCart(callback = null){
         method: 'GET',
         url: '{{ route("get-cart-products") }}',
         success: function(response){
-            $('.cart_contents').html(response);
-            let cartTotal = $('#cart_total').val();
-            let cartCount = $('#cart_product_count').val();
-            $('.cart_subtotal').text("{{ currencyPosition(':cartTotal') }}".replace(':cartTotal', cartTotal));
-            $('.cart_count').text(cartCount);
+            $('.cart_contents').html(response.html);
+            $('.cart_subtotal').text(response.cartTotal);
+            $('.cart_count').text(response.cartCount);
 
             if(callback && typeof callback === 'function'){
                 callback();

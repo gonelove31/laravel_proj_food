@@ -30,13 +30,13 @@ class OrderDataTable extends DataTable
             })
             ->addColumn('order_status', function($query){
                 if($query->order_status === 'pending'){
-                    return '<span class="badge bg-secondary">Pending</span>';
+                    return '<span class="badge bg-secondary">Chờ Xử Lý</span>';
                 }else if($query->order_status === 'in_process'){
-                    return '<span class="badge bg-primary">In Process</span>';
+                    return '<span class="badge bg-primary">Đang Xử Lý</span>';
                 }else if($query->order_status === 'delivered'){
-                    return '<span class="badge bg-success">Delivered</span>';
+                    return '<span class="badge bg-success">Đã Giao</span>';
                 }else if($query->order_status === 'declined'){
-                    return '<span class="badge bg-danger">Declined</span>';
+                    return '<span class="badge bg-danger">Đã Hủy</span>';
                 }
             })
             ->addColumn('payment_status', function($query){
